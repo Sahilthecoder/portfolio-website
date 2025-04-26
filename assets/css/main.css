@@ -72,6 +72,23 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Fade-in and Slide-up Animation */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
 /* Basic */
 
 	@-ms-viewport {
