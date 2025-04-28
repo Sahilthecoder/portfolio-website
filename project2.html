@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<!--
+    Data Analyst Portfolio
+    sahilkhan36985@gmail.com
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Data Analyst Portfolio - Bansal Supermarket Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        .kpi-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0 60px 0;
+        }
+        .kpi {
+            text-align: center;
+        }
+        .kpi h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .kpi p {
+            margin-top: 5px;
+            font-size: 1rem;
+        }
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+        .image-grid > div {
+            flex: 1 1 450px;
+            max-width: 500px;
+            min-width: 250px;
+            text-align: center;
+        }
+        .image-grid img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        @media (max-width: 900px) {
+            .image-grid {
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+            }
+            .image-grid > div {
+                max-width: 100%;
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 60px;
+        }
+        table thead {
+            background-color: #1e3a8a;
+            color: white;
+        }
+        table th,
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        ul.insights {
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            font-size: 1.1rem;
+        }
+        ul.insights li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">DATA ANALYST PORTFOLIO</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="aboutme.html"><i class="fa fa-user"></i> About Me</a></li>
+                    <li><a href="experience.html"><i class="fa fa-briefcase"></i> Experience</a></li>
+                    <li><a href="projects.html"><i class="fa fa-code"></i> Projects</a></li>
+                    <li><a href="#footer"><i class="fa fa-envelope"></i> Contact</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
+
+        <!-- Main Content Wrapper -->
+        <section id="wrapper">
+            <header>
+                <div class="inner">
+                    <h2>Project 2</h2>
+                    <h3>Bansal Supermarket Sales Analysis </h3>
+                    <p>Analysis of sales data from Bansal Supermarket to identify trends and improve decision-making.</p>
+                </div>
+            </header>
+
+            <div class="wrapper">
+                <div class="inner">
+
+                    <!-- Project Overview -->
+                    <h3 class="major">Project Overview</h3>
+                    <p>This project analyzes sales data from Bansal Supermarket to derive actionable insights for inventory management, pricing strategies, and sales optimization. As a GRN Officer at Bansal Supermarket, I leveraged my experience to interpret the data and provide relevant recommendations.</p>
+
+                    <!-- Key Responsibilities -->
+                    <h3 class="major">Key Responsibilities as GRN Officer</h3>
+                    <ul>
+                        <li>Verified floor pricing daily, increasing promotional sales.</li>
+                        <li>Maintained high accuracy in credit/debit note entries.</li>
+                        <li>Reduced stock-outs via real-time updates.</li>
+                        <li>Generated daily/weekly reports (sales, inventory, rate change).</li>
+                        <li>Coordinated with the purchasing team for inventory and pricing updates.</li>
+                        <li>Managed all inventory and pricing tasks using R-Soft (retail software).</li>
+                    </ul>
+
+                    <!-- Sales, Profit & Stock Turnover KPIs -->
+                    <h3 class="major" style="text-align:center;">Sales, Profit & Stock Turnover Analysis</h3>
+                    <div class="kpi-container">
+                        <div class="kpi">
+                            <h2>436,526</h2>
+                            <p>Sum of Total Sales Value</p>
+                        </div>
+                        <div class="kpi">
+                            <h2>17,336</h2>
+                            <p>Sum of Profit Amount</p>
+                        </div>
+                        <div class="kpi">
+                            <h2>5.54%</h2>
+                            <p>Average Profit Margin (%)</p>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Image Grid: 2 images side by side on desktop, stacked on mobile -->
+                    <div class="image-grid">
+                        <div>
+                            <h3>Main Code: Food vs Non Food</h3>
+                            <img src="images/bs3.png" alt="Main Code Food vs Non Food Pie Chart" />
+                            <p style="margin-top: 10px; font-style: italic; font-size: 0.9rem;">
+                                This pie chart shows the proportion of sales from Food and Non-Food categories, highlighting the dominant segment.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Category-wise Sale Distribution</h3>
+                            <img src="images/bs-catsale.png" alt="Category-wise Sale Pie Chart" />
+                            <p style="margin-top: 10px; font-style: italic; font-size: 0.9rem;">
+                                This chart breaks down sales by product categories, helping identify which categories contribute most to revenue.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Single wide image with explanation -->
+                    <div style="max-width: 800px; margin: 0 auto 60px auto; text-align: center;">
+                        <h3>Top 10 Items by Sales</h3>
+                        <img src="images/bs-top10.png" alt="Top 10 Items by Sales Bar Chart" style="max-width:100%; height:auto; border-radius:5px;" />
+                        <p style="margin-top: 10px; font-style: italic; font-size: 0.9rem;">
+                            This bar chart displays the top 10 best-selling items, allowing focus on high-demand products.
+                        </p>
+                    </div>
+
+                    <div style="max-width: 800px; margin: 0 auto 60px auto; text-align: center;">
+                        <h3>Stock Turnover Rate by Category</h3>
+                        <img src="images/bs-stockTO.png" alt="Stock Turnover Rate by Category Bar Chart" style="max-width:100%; height:auto; border-radius:5px;" />
+                        <p style="margin-top: 10px; font-style: italic; font-size: 0.9rem;">
+                            This chart shows how quickly inventory turns over in each category, indicating efficiency in stock management.
+                        </p>
+                    </div>
+
+                    <h2 style="text-align:center; margin-top: 60px;">Bansal Supermarket: Top Selling Items & Profit Analysis</h2>
+                    <div class="image-grid">
+                        <div style="max-width: 800px; margin: 0 auto 60px auto; text-align: center;">
+                            <img src="images/bs2.png" alt="Top Selling Items & Profit Analysis Dashboard" />
+                            <p style="margin-top: 10px; font-style: italic; font-size: 0.9rem;">
+                                This dashboard highlights the top-selling and most profitable items at Bansal Supermarket, revealing which products drive the highest sales and margins
+                            </p>
+                        </div>
+                      
+                    </div>
+
+                    <!-- Data Table -->
+                    <h3 class="major">Top Selling & Profitable Items Data</h3>
+                    <div class="table-wrapper" style="overflow-x:auto;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Item Name</th>
+                                    <th>Category</th>
+                                    <th>Total Sale Value (₹)</th>
+                                    <th>Profit Amount (₹)</th>
+                                    <th>Profit Margin (%)</th>
+                                    <th>Stock Turnover Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TIRUPATI COTTONSEED OIL 1lt</td>
+                                    <td>OIL (EDIBLE)</td>
+                                    <td>63,636</td>
+                                    <td>1,188</td>
+                                    <td>1.87</td>
+                                    <td>1.21</td>
+                                </tr>
+                                <tr>
+                                    <td>RAAG PALMOLIVE OIL POUCH 1 LTR</td>
+                                    <td>OIL (EDIBLE)</td>
+                                    <td>35,326</td>
+                                    <td>967</td>
+                                    <td>2.74</td>
+                                    <td>1.09</td>
+                                </tr>
+                                <tr>
+                                    <td>LOVE BITE NANKHATAI 500g</td>
+                                    <td>BISCUITS AND BAKERY</td>
+                                    <td>1,000</td>
+                                    <td>170</td>
+                                    <td>17.00</td>
+                                    <td>0.50</td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Insights and Recommendations -->
+                    <h3 class="major">Insights and Recommendations</h3>
+                    <ul class="insights">
+                        <li><strong>TIRUPATI COTTONSEED OIL 1lt</strong> is the highest-selling product but has a low profit margin, indicating a volume-driven strategy.</li>
+                        <li><strong>LOVE BITE NANKHATAI 500g</strong> has the highest profit margin, suggesting potential for focused marketing.</li>
+                        <li>Consider promoting high-margin products more aggressively to improve overall profitability.</li>
+                        <li>Monitor stock turnover rates to optimize inventory and reduce holding costs.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <div class="inner">
+                <h2 class="major">Get in touch</h2>
+                <p>Let's chat! Your data, my brain - together we can be unstoppable.</p>
+                <ul class="contact">
+                    <li class="icon solid fa-home">
+                        India (Open for Relocation)<br />
+                    </li>
+                    <li class="icon solid fa-envelope"><a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></li>
+                    <li class="icon brands fa-github"><a href="https://github.com/SahilTheCoder">github.com/SahilTheCoder</a></li>
+                    <li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/sahil-ali-714867242/">linkedin.com/in/sahil-ali-714867242/</a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Portfolio. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
