@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
     <style>
-        .kpi-container {
+        /* .kpi-container {
             display: flex;
             justify-content: space-around;
             margin: 40px 0 60px 0;
@@ -30,63 +30,57 @@
         .kpi p {
             margin-top: 5px;
             font-size: 1rem;
-        }
+        } */
         .image-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: center;
-            margin-bottom: 60px;
-        }
-        .image-grid > div {
-            flex: 1 1 450px;
-            max-width: 500px;
-            min-width: 250px;
-            text-align: center;
-        }
-        .image-grid img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        @media (max-width: 900px) {
-            .image-grid {
-                flex-direction: column;
-                gap: 24px;
-                align-items: center;
-            }
-            .image-grid > div {
-                max-width: 100%;
-            }
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 60px;
-        }
-        table thead {
-            background-color: #1e3a8a;
-            color: white;
-        }
-        table th,
-        table td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: center;
-            font-size: 0.95rem;
-        }
-        table tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        ul.insights {
-            max-width: 900px;
-            margin: 0 auto 60px auto;
-            font-size: 1.1rem;
-        }
-        ul.insights li {
-            margin-bottom: 10px;
-        }
-    </style>
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.image-grid > div {
+    flex: 1 1 200px;
+    max-width: 500px;
+    min-width: 250px;
+    text-align: center;
+}
+
+.image-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* For tablet screens */
+@media (max-width: 900px) {
+    .image-grid {
+        flex-direction: column;
+        gap: 20px; /* Tablet pe thoda kam gap */
+        align-items: center;
+    }
+    .image-grid > div {
+        max-width: 100%;
+    }
+}
+
+/* For mobile screens */
+/* Mobile screen adjustments */
+@media (max-width: 600px) {
+    .image-grid {
+        margin-bottom: 30px; /* Reduce bottom gap */
+    }
+    .image-grid > div h3 {
+        margin-top: 10px;
+        margin-bottom: 6px;
+        font-size: 1.2rem; /* Slightly smaller heading if needed */
+    }
+    .image-grid > div p {
+        margin-top: 6px;
+        margin-bottom: 10px;
+        font-size: 1rem; /* Control paragraph size and spacing */
+    }
+}    </style>
 </head>
 
 <body class="is-preload">
@@ -186,12 +180,12 @@
                   
                     
                     
-  </style>
+              </style>
                     
         
                     <!-- PNG Dashboard Image with explanation -->
                     <div style="max-width:100%;width:96%;margin:0 auto 36px auto;text-align:center;">
-                        <img src="images/bs2.png" alt="Bansal Supermarket: Top Selling Items & Profit Analysis Dashboard" />
+                        <img src="images/bs2.png" alt="Bansal Supermarket: Top Selling Items & Profit Analysis Dashboard" style="width:100%;max-width:100%;height:auto;display:block;border-radius:8px;box-shadow:0 2px 12px rgba(30,60,138,0.07);margin:0 auto 12px auto;">
                         <div style="font-size:1rem;color:#f7f6f6;margin-bottom:12px;">Dashboard overview: Top selling items, profitability, and key metrics visualized from Bansal Supermarket sales data.</div>
                     </div>
                     
