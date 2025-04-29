@@ -2410,7 +2410,6 @@ input, select, textarea {
 		}
 /* ========================
   /* ======================== CSS ======================== */
-
 /* Image Grid Layout */
 .image-grid {
     display: grid;
@@ -2421,27 +2420,62 @@ input, select, textarea {
 
 /* Image Wrapper */
 .image {
-    max-width: 700px;
     width: 100%;
     margin: 0 auto;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
-    cursor: zoom-in;
     transition: transform 0.3s ease;
-	display: inline-block;
+    cursor: zoom-in;
+    display: block;
 }
 
+/* Image Tag */
 .image img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 5px;
     object-fit: cover;
-	display: block;
 }
 
-/* Caption */
+/* Left/Right Floated Images */
+.image.left,
+.image.right {
+    max-width: 40%;
+}
+
+.image.left {
+    float: left;
+    padding: 0 1.5em 1em 0;
+    top: 0.25em;
+}
+
+.image.right {
+    float: right;
+    padding: 0 0 1em 1.5em;
+    top: 0.25em;
+}
+
+.image.left img,
+.image.right img {
+    width: 100%;
+}
+
+/* Fit and Main Image Styles */
+.image.fit,
+.image.main {
+    display: block;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.image.fit img,
+.image.main img {
+    width: 100%;
+}
+
+/* Image Caption */
 .image-caption {
     text-align: center;
     font-size: 0.9rem;
@@ -2449,8 +2483,7 @@ input, select, textarea {
     margin-top: 0.5em;
 }
 
-
-/* Zoom Image Overlay (optional) */
+/* Zoom Image Overlay */
 .image-zoom-container {
     position: fixed;
     top: 0;
@@ -2479,23 +2512,23 @@ input, select, textarea {
     object-fit: contain;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* Responsive for Mobile */
+/* @media (max-width: 768px) {
     .image,
     .image.left,
     .image.right {
-        float: none;
+        float: n;
         width: 90%;
         max-width: 90%;
         margin: 0 auto 1.5em auto;
-        padding: 0;
-    }
+        padding: 0; */
+    /* } */
 
-    .image-zoomed {
+    /* .image-zoomed {
         max-width: 95%;
-        max-height: 80%;
-    }
-}
+        max-height: 80%; */
+    /* } */
+/* } */
 
   
   
