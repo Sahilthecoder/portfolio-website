@@ -72,23 +72,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-/* Fade-in and Slide-up Animation */
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
-
 /* Basic */
 
 	@-ms-viewport {
@@ -2425,61 +2408,96 @@ input, select, textarea {
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
+/* ========================
+  /* ======================== CSS ======================== */
 
-/* Image */
+/* Image Grid Layout */
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    margin-bottom: 2em;
+}
 
-	.image {
-		border-radius: 5px;
-		border: 0;
-		display: inline-block;
-		position: relative;
-	}
+/* Image Wrapper */
+.image {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
 
-		.image img {
-			border-radius: 5px;
-			display: block;
-		}
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    object-fit: cover;
+}
 
-		.image.left, .image.right {
-			max-width: 40%;
-		}
+/* Caption */
+.image-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-top: 0.5em;
+}
 
-			.image.left img, .image.right img {
-				width: 100%;
-			}
 
-		.image.left {
-			float: left;
-			padding: 0 1.5em 1em 0;
-			top: 0.25em;
-		}
+/* Zoom Image Overlay (optional) */
+.image-zoom-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
 
-		.image.right {
-			float: right;
-			padding: 0 0 1em 1.5em;
-			top: 0.25em;
-		}
+.image-zoom-container.active {
+    opacity: 1;
+    pointer-events: all;
+}
 
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
-			width: 100%;
-		}
+.image-zoomed {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
 
-			.image.fit img {
-				width: 100%;
-			}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .image,
+    .image.left,
+    .image.right {
+        float: none;
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto 1.5em auto;
+        padding: 0;
+    }
 
-		.image.main {
-			display: block;
-			margin: 0 0 3em 0;
-			width: 100%;
-		}
+    .image-zoomed {
+        max-width: 95%;
+        max-height: 80%;
+    }
+}
 
-			.image.main img {
-				width: 100%;
-			}
-
+  
+  
+   
 /* List */
 
 	ol {
@@ -2799,71 +2817,96 @@ input, select, textarea {
 
 /* Table */
 
-	.table-wrapper {
-		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
-	}
+	/* Responsive Table Container */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 40px 0;
+    padding: 16px;
+    background-color: #1f2937; /* Dark background */
+    border: 1px solid #374151;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-	table {
-		margin: 0 0 2em 0;
-		width: 100%;
-	}
+/* Main Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1f2937; /* Matching wrapper */
+    color: #ffffff;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
 
-		table tbody tr {
-			border: solid 1px rgba(255, 255, 255, 0.125);
-			border-left: 0;
-			border-right: 0;
-		}
+/* Header */
+table thead {
+    background-color: #334155;
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
 
-			table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(255, 255, 255, 0.025);
-			}
+table thead th {
+    font-weight: 600;
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 0.9em;
+}
 
-		table td {
-			padding: 0.75em 0.75em;
-		}
+/* Body */
+table tbody tr {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s ease;
+}
 
-		table th {
-			color: #ffffff;
-			font-size: 0.9em;
-			font-weight: 600;
-			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
-		}
+table tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.025);
+}
 
-		table thead {
-			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-		}
+table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
 
-		table tfoot {
-			border-top: solid 2px rgba(255, 255, 255, 0.125);
-		}
+table td {
+    padding: 12px 16px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 400;
+}
 
-		table.alt {
-			border-collapse: separate;
-		}
+/* Footer */
+table tfoot {
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+}
 
-			table.alt tbody tr td {
-				border: solid 1px rgba(255, 255, 255, 0.125);
-				border-left-width: 0;
-				border-top-width: 0;
-			}
+/* Alternate Table Design */
+table.alt {
+    border-collapse: separate;
+    border-spacing: 0;
+}
 
-				table.alt tbody tr td:first-child {
-					border-left-width: 1px;
-				}
+table.alt td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-			table.alt tbody tr:first-child td {
-				border-top-width: 1px;
-			}
+table.alt td:first-child {
+    border-left-width: 1px;
+}
 
-			table.alt thead {
-				border-bottom: 0;
-			}
+table.alt tr:first-child td {
+    border-top-width: 1px;
+}
 
-			table.alt tfoot {
-				border-top: 0;
-			}
+/* Responsive Text Alignment */
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+}
 
 /* Button */
 
