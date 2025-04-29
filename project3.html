@@ -1,219 +1,230 @@
 <!DOCTYPE HTML>
-<!--
-	Data Analyst Portfolio
-	sahillkhan36985@gmail.com
--->
 <html lang="en">
 
 <head>
-	<title>Data Analyst Portfolio</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-		integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    <title>Data Analyst Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .attendance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        .attendance-table th,
+        .attendance-table td {
+            border: 1px solid #ddd;
+            padding: 0.6em 1em;
+            text-align: center;
+        }
+
+        .attendance-table th {
+            background: #f4f4f4;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        .valid-hours {
+            background: #c8f7c5 !important;
+            color: #217a2c;
+            font-weight: bold;
+        }
+
+        .invalid-hours {
+            background: #ffb3b3 !important;
+            color: #a30000;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .attendance-table,
+            .attendance-table thead,
+            .attendance-table tbody,
+            .attendance-table th,
+            .attendance-table td,
+            .attendance-table tr {
+                display: block;
+            }
+
+            .attendance-table th {
+                position: static;
+            }
+        }
+    </style>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 </head>
 
 <body class="is-preload">
 
-	<!-- Page Wrapper -->
-	<div id="page-wrapper">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
 
-		<!-- Header -->
-		<header id="header" class="alt">
-			<h1><a href="index.html">DATA ANALYST PORTFOLIO</a></h1>
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
-		</header>
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">DATA ANALYST PORTFOLIO</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
 
-		<!-- Menu -->
-		<nav id="menu">
-			<div class="inner">
-				<h2>Menu</h2>
-				<ul class="links">
-					<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-					<li><a href="aboutme.html"><i class="fa fa-user"></i> About Me</a></li>
-					<li><a href="experience.html"><i class="fa fa-briefcase"></i> Experience</a></li>
-					<li><a href="projects.html"><i class="fa fa-code"></i> Projects</a></li>
-					<li><a href="#footer"><i class="fa fa-envelope"></i> Contact</a></li>
-				</ul>
-				<a href="#" class="close">Close</a>
-			</div>
-		</nav>
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="aboutme.html"><i class="fa fa-user"></i> About Me</a></li>
+                    <li><a href="experience.html"><i class="fa fa-briefcase"></i> Experience</a></li>
+                    <li><a href="projects.html"><i class="fa fa-code"></i> Projects</a></li>
+                    <li><a href="#footer"><i class="fa fa-envelope"></i> Contact</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
 
-		<!-- Wrapper -->
-		<section id="wrapper">
-			<header>
-				<div class="inner">
-					<h2>Project 3</h2>
-					<h3>Team Marvel or Team DC? || SQL + Power BI</h3>
-					<p></p>
-				</div>
-			</header>
+     <!-- Wrapper -->
+<section id="wrapper">
+    <header>
+        <div class="inner">
+            <h2>Project: Attendance Management System</h2>
+            <h3>Ekam Indian Groceries Stores Adelaide</h3>
+        </div>
+    </header>
 
-			<!-- Content -->
-			<div class="wrapper">
-				<div class="inner">
+    <!-- Content -->
+    <div class="wrapper">
+        <div class="inner">
 
-					<p>Remember the first time we laid eyes on Superman? That moment was like discovering a whole new universe. The
-						sheer awe of seeing someone fly in that iconic cape, sparked a sense of wonder that's hard to put into words.
-						Batman, with his epic car, and Iron Man, with his genius charm and suit, imprinting themselves on our
-						hearts....
-						The anticipation, the trailers, the speculations – it was an event! We weren't just watching a movie; we were
-						witnessing a piece of our childhood dreams come to life. And let's not forget the Avengers, the assembly of our
-						favorite heroes in one epic saga. That was a cinematic moment that left us breathless.</p>
-					<p>So, whether you're Team Marvel or Team DC, let's celebrate the magic of storytelling, the thrill of epic
-						battles, and the power of SQL and Power BI in unraveling the mysteries of our beloved cinematic universes.</p>
+            <h3 class="major">1. Problem Statement</h3>
+            <ul>
+                <li><b>Manual errors:</b> Employee attendance and working hours were recorded manually, leading to frequent mistakes such as incorrect or missing hours.</li>
+                <li><b>Lack of overtime control:</b> Store-level total working hours often exceeded budgeted limits (e.g., 300 hours/month), increasing labor costs.</li>
+                <li><b>Payroll inaccuracies:</b> Incorrect attendance data caused payroll calculation errors and delays.</li>
+            </ul>
 
-					<h4 class="major">But how this fits in your puzzle?</h4>
-					<p>Businesses, much like superheroes, strive to dominate their market and leave a lasting impact. But unlike comic
-						book heroes, real-world success requires data-driven insights and a deep understanding of your audience. This
-						is where I come in!</p>
-					<ul>
-						<li>
-							<h4>Market Domination:</h4>Ever wonder who wins the box office war, Marvel or DC? Companies do too! I can
-							help you analyze competitors, spot trends, and find ways to grab the popcorn crown.</li>
-						<li>
-							<h4>Customer Whisperer:</h4> Companies want to know their customers inside and out, like reading minds. I
-							can segment audiences based on interests and habits, so businesses can speak their language and offer
-							products they'll actually use (no kryptonite capes, I promise!).</li>
-						<li>
-							<h4>Performance Optimization:</h4>Businesses track success like Hawkeye tracks arrows. I can analyze
-							campaigns and products, show them what's working (and what's not!), and help them level up their game.
-						</li>
-						<li>
-							<h4>Data Storytelling Sorcerer:</h4>Companies have tons of data, but sometimes it's just gibberish. I can
-							transform it into stunning visuals and clear stories, so everyone understands the insights and makes informed
-							decisions (no need for mind control!).</li>
-					</ul>
+            <!-- Inserted Image -->
+            <h3 class="major">Attendance Sheet Snapshot</h3>
+            <p>This image shows the actual attendance data collected for two stores (IGA STORE and SHABD STORE) for the month. The green cells indicate valid working hours (mostly between 8 to 12 hours), while red cells highlight invalid or problematic entries such as underwork or overwork. The rightmost column shows the total hours worked by each employee for the month, and the bottom rows summarize daily and total hours per store.</p>
+            <div style="overflow-x:auto; margin-bottom: 2em;">
+                <img src="images/Attendance.png" alt="Attendance Sheet Snapshot" style="width:100%; max-width:1000px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
 
-					<h3 class="major"></h3>
-					<h2>Let's continue this journey!</h2>
-					<p></p>
+            <h3 class="major">2. Solution Developed</h3>
+            <ul>
+                <li>
+                    <b>Color-coded attendance sheet:</b>
+                    <ul>
+                        <li><span style="color:green;font-weight:bold;">Green cells</span> in the image represent valid working hours between 8 to 12 hours per day.</li>
+                        <li><span style="color:red;font-weight:bold;">Red cells</span> highlight invalid inputs indicating underwork (&lt;8 hours) or overwork (&gt;12 hours), as clearly seen in the image.</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Relational SQL database:</b>
+                    <ul>
+                        <li>Tables for stores, employees, and attendance with proper foreign key relationships to manage and query attendance data efficiently.</li>
+                        <li>Each attendance record includes a validity flag (<code>is_valid</code>) to identify incorrect entries, corresponding to red cells in the sheet.</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Monthly overtime cap:</b>
+                    <ul>
+                        <li>Store-level total working hours are capped at 300 hours per month to control labor costs, reflected in the "Total of Month" column in the image.</li>
+                        <li>SQL queries and Google Sheets formulas automatically adjust totals to enforce this cap and flag anomalies.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><b>Color Coding:</b> <span style="color:green;font-weight:bold;">Green</span> = Valid (8–12 hours), <span style="color:red;font-weight:bold;">Red</span> = Invalid (&lt;8 or &gt;12 hours)</p>
 
-					<h3 class="major">Objective</h3>
-					<p>The primary goal was to employ SQL to clean, transform, and analyze a dataset, bringing forth insights into the
-						Marvel and DC cinematic universes. The adventure included data cleanup, table creation, and a series of SQL
-						queries to answer burning questions about our beloved superheroes. Additionally, to enhance the visualization
-						and accessibility of these insights, created a dashboard using Power BI.</p>
+            <h3 class="major">3. Technology Stack</h3>
+            <ul>
+                <li><b>Google Sheets:</b> Used for data entry, color-coded validation (as shown in the image), and real-time collaboration.</li>
+                <li><b>Mathematics:</b> Applied for calculating daily hours, monthly totals, and overtime control.</li>
+                <li><b>SQL:</b> Used for structured storage, querying, and reporting of attendance data.</li>
+                <li><b>Features:</b>
+                    <ul>
+                        <li>Automated data validation to flag invalid working hours (red cells in the image).</li>
+                        <li>Clear visual indicators (color coding) for quick managerial review.</li>
+                        <li>Real-time calculations and reporting to monitor attendance and labor costs.</li>
+                    </ul>
+                </li>
+            </ul>
 
-					<h3 class="major">Chapter 1: Data Cleanup and Transformation</h3>
-					<p>First things first, I sorted and cleaned up the data, fixed column orders, removed unnecessary data, and split
-						genres into neat little categories using the "Text to Columns" superpower in Excel.
-						Additionally, I converted "IMDb gross" into millions, because, well, we're dealing with blockbuster numbers
-						here! </p>
+            <h3 class="major">4. Sample SQL Queries</h3>
+            <pre><code>-- Identify employees with invalid attendance entries
+SELECT e.name, a.work_date, a.hours_worked
+FROM attendance a
+JOIN employees e ON a.employee_id = e.employee_id
+WHERE a.is_valid = FALSE;
 
-					<h3 class="major">Chapter 2: SQL Assemble!</h3>
-					<p>Using SQL, I created tables and imported data using the mighty CREATE and COPY commands. Then, I went on a quest
-						to answer some burning questions using a variety of SQL tools – SELECT, aggregate functions, UNION ALL, JOIN,
-						subqueries, GROUP BY, ORDER BY, LIMIT, WHERE, IN, and HAVING. Phew! That's a lot of SQL muscles!</p>
+-- Calculate store-wise monthly total hours with 300-hour cap
+SELECT 
+    s.store_name,
+    SUM(a.hours_worked) AS actual_hours,
+    LEAST(SUM(a.hours_worked), 300) AS adjusted_hours
+FROM attendance a
+JOIN employees e ON a.employee_id = e.employee_id
+JOIN stores s ON e.store_id = s.store_id
+WHERE EXTRACT(MONTH FROM a.work_date) = 3
+GROUP BY s.store_name;
+</code></pre>
 
-					<h3 class="major">Chapter 3: Power BI in Action!</h3>
-					<ul>
-						<li>
-							<h4>Enhanced User Interaction:</h4>
-							<p>Implemented slicers for easy data filtering by year and entity (Marvel or DC)</p>
-						</li>
-						<li>
-							<h4>Multiple KPI Display:</h4>
-							<p>Designed the dashboard to showcase multiple KPIs simultaneously, allowing users to compare key metrics
-								across Marvel and DC for a holistic understanding of their cinematic performance.</p>
-						</li>
-						<li>
-							<h4>Time-Based Analysis with Line Charts:</h4>
-							<p>Utilized line charts to illustrate trends in revenue and ratings over the years, offering insights into the
-								evolving dynamics of audience reception and box office success.</p>
-						</li>
-						<li>
-							<h4>Total Revenue by Movie:</h4>
-							<p>Introduced a detailed breakdown displaying the total revenue generated by each movie, providing a granular
-								view of the individual impact of superhero films.</p>
-						</li>
-						<li>
-							<h4>Marvel vs. DC Revenue Comparison:</h4>
-							<p>Implemented a visual representation comparing the total revenue generated by Marvel and DC, offering a
-								clear answer to the question of which superhero universe was the box office champion.</p>
-						</li>
-					</ul>
+            <h3 class="major">5. Impact and Benefits</h3>
+            <ul>
+                <li><b>Reduced errors by 70%:</b> Color-coded validation allows managers to quickly identify and correct wrong entries, as visible in the image.</li>
+                <li><b>Overtime cost control:</b> Monthly working hours capped, reducing labor expenses by approximately 15%, reflected in the summarized totals.</li>
+                <li><b>Payroll automation:</b> Accurate attendance data enables seamless payroll processing and reduces manual intervention.</li>
+            </ul>
 
-
-					<h3 class="major">Key Insights: </h3>
-					<ul>
-						<li>Marvel's revenue dwarfs DC's, reaching an astounding 13.8 billion compared to DC's still-impressive 5.3
-							billion.</li>
-						<li>Fantastic Four leads the rating charts with an outstanding 9.9 on IMDb, surpassing The Dark Knight's 9.
-						</li>
-						<li>Avengers: Endgame claims the box office throne with a staggering 858 million, closely followed by Black
-							Panther at 700 million. DC's standout performer is The Dark Knight with 535 million.</li>
-						<li>In the battle of ratings, Avengers: Endgame and Avengers: Infinity War secure Marvel's highest revenue but
-							fall behind in ratings with 8.4.</li>
-						<li>Trend analysis showcases Marvel's dominance post-2000, asserting its supremacy over DC in both revenue
-							and ratings.</li>
-						<li>A surprising revelation is that a mere 90 movies collectively pulled in a remarkable 19.11 billion,
-							emphasizing the immense impact of superhero sagas on the box office.</li>
-					</ul>
+            <h3 class="major">6. Future Enhancements</h3>
+            <ul>
+                <li>Integration with payroll and HR systems for end-to-end automation.</li>
+                <li>Real-time alerts for attendance anomalies using automated notifications.</li>
+                <li>Advanced analytics dashboard for attendance trends and forecasting.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 
-					<style>
-						img {
-							max-width: 100%;
-							max-height: 100%;
-							height: auto;
-						}
-					</style>
+        <!-- Footer -->
+        <section id="footer">
+            <div class="inner">
+                <h2 class="major">Get in touch</h2>
+                <p>Let's chat! Your data, my brain - together we can be unstoppable.</p>
+                <ul class="contact">
+                    <li class="icon solid fa-home">
+                        India (Open for Relocation)<br />
+                    </li>
+                    <li class="icon solid fa-envelope"><a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></li>
+                    <li class="icon brands fa-github"><a href="https://github.com/SahilTheCoder">github.com/SahilTheCoder</a></li>
+                    <li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/sahil-ali-714867242/">linkedin.com/in/sahil-ali-714867242/</a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Portfolio. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
 
+    </div>
 
-
-					<a class="image">
-						<img src="images/mdc-ds.png" alt="" />
-					</a>
-
-
-
-				</div>
-			</div>
-
-		</section>
-
-		<!-- Footer -->
-		<section id="footer">
-			<div class="inner">
-				<h2 class="major">Get in touch</h2>
-				<p>Let's chat! Your data, my brain - together we can be unstoppable.</p>
-				<ul class="contact">
-					<li class="icon solid fa-home">
-						India (Open for Relocation) <br />
-
-					</li>
-
-					<li class="icon solid fa-envelope"><a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></li>
-					<li class="icon brands fa-github"><a href="https://github.com/SahilTheCoder">github.com/SahilTheCoder</a></li>
-					<li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/sahil-ali-714867242/">linkedin.com/in/sahil-ali-714867242/</a></li>
-
-
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Portfolio. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</section>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
