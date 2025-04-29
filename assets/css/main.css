@@ -2429,6 +2429,7 @@ input, select, textarea {
     position: relative;
     cursor: zoom-in;
     transition: transform 0.3s ease;
+	display: inline-block;
 }
 
 .image img {
@@ -2437,6 +2438,7 @@ input, select, textarea {
     display: block;
     border-radius: 5px;
     object-fit: cover;
+	display: block;
 }
 
 /* Caption */
