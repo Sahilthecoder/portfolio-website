@@ -2411,6 +2411,10 @@ input, select, textarea {
 
 /* Image */
 /* General Styles for Images */
+.image{
+	display: block;
+}
+
 .image img {
 	display: block; /* Make the image a block element */
 	width: 100%; /* The width will adapt to the parent container's width */
