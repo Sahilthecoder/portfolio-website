@@ -142,53 +142,39 @@
 
 			});
 
-  // --------------------------
-  // Image Preview & Zoom Code
-  // --------------------------
-  $(function() {
-    // Append modal HTML once
-    if ($('#imgModal').length === 0) {
-      $('body').append(`
-        <div id="imgModal" style="display:none;position:fixed;z-index:1000;padding-top:60px;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,0.9);">
-          <span class="close" style="position:absolute;top:30px;right:45px;color:#fff;font-size:40px;font-weight:bold;cursor:pointer;">&times;</span>
-          <img id="modalImage" style="margin:auto;display:block;max-width:90%;max-height:80vh;transition:transform 0.25s ease;cursor:zoom-in;" />
-          <div id="caption" style="margin:auto;display:block;width:80%;max-width:700px;text-align:center;color:#ccc;padding:10px 0;"></div>
-        </div>
-      `);
-    }
+	// Image Zoom Functionality
+	$('.image').each(function() {
+		var $image = $(this);
+		var $img = $image.find('img');
+		var src = $img.attr('src');
 
-    var $modal = $('#imgModal');
-    var $modalImg = $('#modalImage');
-    var $caption = $('#caption');
-    var $closeBtn = $modal.find('.close');
+		// Create zoom container
+		var $zoomContainer = $('<div class="image-zoom-container">')
+			.append($('<img class="image-zoomed">').attr('src', src))
+			.appendTo($body);
 
-    // Open modal on clicking images with class 'previewable'
-    $('img.previewable').css('cursor', 'pointer').on('click', function() {
-      $modal.show();
-      $modalImg.attr('src', this.src).removeClass('zoomed').css('transform', 'scale(1)').css('cursor', 'zoom-in');
-      $caption.text(this.alt || '');
-    });
+		// Click handler for zoom in
+		$image.on('click', function(e) {
+			e.stopPropagation();
+			$zoomContainer.addClass('active');
+			$body.addClass('no-scroll');
+		});
 
-    // Close modal on clicking close button
-    $closeBtn.on('click', function() {
-      $modal.hide();
-    });
+		// Click handler for zoom out
+		$zoomContainer.on('click', function(e) {
+			if ($(e.target).is('.image-zoom-container')) {
+				$zoomContainer.removeClass('active');
+				$body.removeClass('no-scroll');
+			}
+		});
 
-    // Toggle zoom on modal image click
-    $modalImg.on('click', function() {
-      if ($modalImg.hasClass('zoomed')) {
-        $modalImg.removeClass('zoomed').css('transform', 'scale(1)').css('cursor', 'zoom-in');
-      } else {
-        $modalImg.addClass('zoomed').css('transform', 'scale(2)').css('cursor', 'zoom-out');
-      }
-    });
-
-    // Close modal if clicked outside the image
-    $modal.on('click', function(e) {
-      if (e.target === this) {
-        $modal.hide();
-      }
-    });
-  });
+		// Escape key handler
+		$(document).on('keydown', function(e) {
+			if (e.keyCode === 27 && $zoomContainer.hasClass('active')) {
+				$zoomContainer.removeClass('active');
+				$body.removeClass('no-scroll');
+			}
+		});
+	});
 
 })(jQuery);
