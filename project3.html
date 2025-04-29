@@ -116,7 +116,7 @@
             <!-- Inserted Image -->
             <h3 class="major">Attendance Sheet Snapshot</h3>
             <p>This image shows the actual attendance data collected for two stores (IGA STORE and SHABD STORE) for the month. The green cells indicate valid working hours (mostly between 8 to 12 hours), while red cells highlight invalid or problematic entries such as underwork or overwork. The rightmost column shows the total hours worked by each employee for the month, and the bottom rows summarize daily and total hours per store.</p>
-            <div style="overflow-x:auto; margin-bottom: 2em;">
+            <div class="image" style="overflow-x:auto; margin-bottom: 2em;">
                 <img src="images/Attendance.png" alt="Attendance Sheet Snapshot" style="width:100%; max-width:1000px; border: 1px solid #ddd; border-radius: 5px;">
             </div>
 
@@ -125,26 +125,49 @@
                 <li>
                     <b>Color-coded attendance sheet:</b>
                     <ul>
-                        <li><span style="color:green;font-weight:bold;">Green cells</span> in the image represent valid working hours between 8 to 12 hours per day.</li>
-                        <li><span style="color:red;font-weight:bold;">Red cells</span> highlight invalid inputs indicating underwork (&lt;8 hours) or overwork (&gt;12 hours), as clearly seen in the image.</li>
+                        <li>
+                            <span style="color:green; font-weight:bold;">Green cells</span> indicate employees with <strong>correct time management calculations</strong>.
+                        </li>
+                        <li>
+                            <span style="color:red; font-weight:bold;">Red cells</span> highlight employees with <strong>incorrect working hour calculations</strong> as identified by your system.
+                        </li>
                     </ul>
+                    
+                    
                 </li>
                 <li>
                     <b>Relational SQL database:</b>
                     <ul>
-                        <li>Tables for stores, employees, and attendance with proper foreign key relationships to manage and query attendance data efficiently.</li>
-                        <li>Each attendance record includes a validity flag (<code>is_valid</code>) to identify incorrect entries, corresponding to red cells in the sheet.</li>
-                    </ul>
-                </li>
-                <li>
-                    <b>Monthly overtime cap:</b>
-                    <ul>
-                        <li>Store-level total working hours are capped at 300 hours per month to control labor costs, reflected in the "Total of Month" column in the image.</li>
-                        <li>SQL queries and Google Sheets formulas automatically adjust totals to enforce this cap and flag anomalies.</li>
-                    </ul>
-                </li>
-            </ul>
-            <p><b>Color Coding:</b> <span style="color:green;font-weight:bold;">Green</span> = Valid (8–12 hours), <span style="color:red;font-weight:bold;">Red</span> = Invalid (&lt;8 or &gt;12 hours)</p>
+   
+                        <ul>
+                            <li>
+                                <strong>Database Architecture:</strong>
+                                <ul>
+                                    <li><b>Relational Structure:</b> Stores → Employees → Attendance (cascading foreign keys)</li>
+                                    <li><b>Validation Flag:</b> <code>is_valid</code> field marks entries requiring review (red cells)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Time Management Controls:</strong>
+                                <ul>
+                                    <li><b>Enterprise-wide Limit:</b> 4000 total working hours/month across all employees
+                                        <ul>
+                                            <li><b>Database Enforcement:</b> <code>CHECK(SUM(total_hours) <= 4000)</code> in monthly rollup tables</li>
+                                            <li><b>Spreadsheet Formula:</b> <code>=IF(SUM(EmployeeTotals!B:B)>4000, "OVER CAP", "OK")</code></li>
+                                        </ul>
+                                    </li>
+                                    <li><b>Anomaly Detection:</b>
+                                        <ul>
+                                            <li>SQL alerts when approaching threshold: <code>WHERE monthly_sum > 3800</code></li>
+                                            <li>Sheet conditional formatting rules for 90%+ capacity (e.g., 3600+ hours)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+
+            <!-- <p><b>Color Coding:</b> <span style="color:green;font-weight:bold;">Green</span> = Valid (8–12 hours), <span style="color:red;font-weight:bold;">Red</span> = Invalid (&lt;8 or &gt;12 hours)</p> -->
 
             <h3 class="major">3. Technology Stack</h3>
             <ul>
@@ -161,22 +184,36 @@
             </ul>
 
             <h3 class="major">4. Sample SQL Queries</h3>
-            <pre><code>-- Identify employees with invalid attendance entries
+<pre><code>-- 1. Identify invalid attendance entries
 SELECT e.name, a.work_date, a.hours_worked
 FROM attendance a
 JOIN employees e ON a.employee_id = e.employee_id
-WHERE a.is_valid = FALSE;
+WHERE a.is_valid = FALSE
+ORDER BY a.work_date DESC;
 
--- Calculate store-wise monthly total hours with 300-hour cap
+-- 2. Calculate enterprise-wide monthly hours
 SELECT 
+    EXTRACT(MONTH FROM a.work_date) AS month,
+    SUM(a.hours_worked) AS total_hours,
+    CASE 
+        WHEN SUM(a.hours_worked) > 4000 THEN 'OVER_CAP'
+        WHEN SUM(a.hours_worked) > 3800 THEN 'NEAR_CAP'
+        ELSE 'UNDER_CAP'
+    END AS status
+FROM attendance a
+GROUP BY EXTRACT(MONTH FROM a.work_date);
+
+-- 3. Early warning alert (90% capacity)
+SELECT 
+    e.name,
     s.store_name,
-    SUM(a.hours_worked) AS actual_hours,
-    LEAST(SUM(a.hours_worked), 300) AS adjusted_hours
+    SUM(a.hours_worked) AS employee_total
 FROM attendance a
 JOIN employees e ON a.employee_id = e.employee_id
 JOIN stores s ON e.store_id = s.store_id
-WHERE EXTRACT(MONTH FROM a.work_date) = 3
-GROUP BY s.store_name;
+WHERE EXTRACT(MONTH FROM a.work_date) = EXTRACT(MONTH FROM CURRENT_DATE)
+GROUP BY e.name, s.store_name
+HAVING SUM(a.hours_worked) > 3600 * (SELECT COUNT(DISTINCT employee_id) FROM employees) / 4000;
 </code></pre>
 
             <h3 class="major">5. Impact and Benefits</h3>
