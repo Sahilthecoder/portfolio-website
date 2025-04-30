@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<!--
+	Data Analyst Portfolio
+	sahilkhan36985@gmail.com
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <meta name="description" content="Sahil Ali's Data Analyst Portfolio – showcasing automation projects using SQL, Google Sheets, and data insights." />
+    <meta name="author" content="Sahil Ali" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Title -->
+    <title>Sahil Ali - Data Analyst Portfolio</title>
+
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" />
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">DATA ANALYST PORTFOLIO</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
+
+        <!-- Wrapper -->
+        <section id="wrapper">
+            <header>
+                <div class="inner">
+                    <h2>Project 4</h2>
+                    <h3>Daily Cash Flow Dashboard: Multi-Store Retail Analysis (Power BI & Google Sheets)</h3>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="wrapper">
+                <div class="inner">
+                    <p>
+                        <strong>Overview:</strong><br>
+                        Developed a robust daily cash flow management system for two retail stores by integrating <b>Google Sheets</b> (for data entry) with <b>Power BI</b> (for visualization and analysis). This solution automates daily tracking of cash inflows, outflows, deposits, and discrepancies, providing real-time insights for better decision-making.
+                    </p>
+                    <ul>
+                        <li>Automated data import from Google Sheets to Power BI for real-time dashboard updates.</li>
+                        <li>Daily tracking of sales, expenses, coin additions, and deposits for each store.</li>
+                        <li>Dynamic calculation of opening/closing balances, shortfall/excess, and cash left in drawer.</li>
+                        <li>Custom Power BI dashboards for trend analysis, store comparisons, and anomaly detection.</li>
+                    </ul>
+
+                    <!-- Explanation of Cash Flow Process -->
+
+                    <h4>How Daily Cash Flow Works:</h4>
+
+                    <p><strong>1. Opening Balance:</strong><br>
+                        At the beginning of each day, the cashier starts with an <em>Opening Balance</em> from the previous day's closing balance. This amount is carried over from the previous day’s end and represents the cash available to the cashier to begin the day’s operations.
+                        <br>Example: If yesterday’s closing balance was ₹5,000, this becomes today’s opening balance.
+                    </p>
+
+                    <p><strong>2. Cash Sales:</strong><br>
+                        Throughout the day, as customers make cash purchases, the cashier records the amount. This cash is added to the <em>Opening Balance</em> to calculate the total cash available for the day.
+                        <br>Example: If today's cash sales total ₹8,000, then the total cash available becomes ₹5,000 (opening balance) + ₹8,000 (cash sales) = ₹13,000.
+                    </p>
+
+                    <p><strong>3. Expenses (Store and Staff Payments):</strong><br>
+                        The store incurs daily expenses such as rent, electricity, and staff payments. These expenses are deducted from the total available cash. 
+                        <br>Example: If store expenses amount to ₹2,000 and staff payments total ₹3,000, this ₹5,000 will be deducted from the total cash available.
+                        <br>The amount left after expenses is referred to as the <em>Cash After Expenses</em>.
+                    </p>
+
+                    <p><strong>4. Closing Balance:</strong><br>
+                        After all expenses are deducted, the remaining cash is the <em>Closing Balance</em>. This is the final amount the cashier has at the end of the day, ready for deposit or carryover.
+                        <br>Example: If, after deducting ₹5,000 in expenses, ₹8,000 is remaining, this ₹8,000 becomes the closing balance.
+                    </p>
+
+                    <p><strong>5. Deposit:</strong><br>
+                        At the end of the day, a portion of the closing balance is deposited into the store’s bank account. This is done to ensure that the store does not hold too much cash overnight.
+                        <br>Example: If ₹6,000 is deposited into the bank, the remaining ₹2,000 stays with the cashier for the next day.
+                    </p>
+
+                    <p><strong>6. Next Day’s Opening Balance:</strong><br>
+                        The <em>Opening Balance</em> for the next day is the remaining amount after the deposit is made.
+                        <br>Example: If the closing balance was ₹8,000 and ₹6,000 was deposited, the next day’s opening balance will be ₹2,000.
+                    </p>
+
+                    <!-- Key Formula and DAX Measure -->
+                    <h4>Key Google Sheets Formula Example:</h4>
+					<h4>Google Sheets Formula:</h4>
+<pre style="white-space: pre-wrap; overflow-x: auto; padding: 14px; background-color: #21212179; border-radius: 6px; color: #e0e0e0; font-size: 14px; font-family: 'Courier New', monospace;">
+=LEFT_TO_DRAWER + DEPOSIT - CLOSING_BALANCE
+= D7346 + D7345 - D7342
+</pre>
+
+<h4>Power BI DAX Measure:</h4>
+<pre style="white-space: pre-wrap; overflow-x: auto; padding: 14px; background-color: #21212179; border-radius: 6px; color: #e0e0e0; font-size: 14px; font-family: 'Courier New', monospace;">
+Closing Balance = 
+SUM('CashFlow'[Opening Balance]) +
+SUM('CashFlow'[Total Income]) -
+SUM('CashFlow'[Total Expenses]) -
+SUM('CashFlow'[Deposit])
+</pre>
+
+
+                    <p><strong>Business Value:</strong><br>
+                        This dashboard reduces manual errors, increases transparency, and enables instant cash position checks for each store, improving overall financial control.
+                    </p>
+
+                    <p><strong>Tech Stack:</strong> Google Sheets, Power BI Desktop, Power Query, DAX.</p>
+
+                    <h4>Visuals:</h4>
+                    <ul>
+                        <li>
+                            <b>Screenshot 1:</b> <em>Daily Cash Flow Dashboard Overview</em><br>
+                            <img src="images/CashFlow1.avif" alt="Power BI Cash Flow Dashboard" style="width:100%;max-width:800px;">
+                            <p><small>This dashboard provides a high-level view of daily cash inflows and outflows, enabling quick financial insights and effective cash management decisions.</small></p>
+                          </li>
+                          
+                          <li>
+                            <b>Screenshot 2:</b> <em>Store-wise Cash Summary</em><br>
+                            <img src="images/CashFlow2.avif" alt="Store Cash Summary" style="width:100%;max-width:800px;">
+                            <p><small>Breaks down cash performance by individual store locations, helping identify trends, monitor variances, and ensure financial accuracy across outlets.</small></p>
+                          </li>
+                          
+                        <!-- Or link to a live demo if available -->
+                        <!-- <li><a href="your-live-demo-link" target="_blank">View Live Demo</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <div class="inner">
+                <h2 class="major">Get in touch</h2>
+                <p>Let's chat! Your data, my brain - together we can be unstoppable.</p>
+                <ul class="contact">
+                    <li class="icon solid fa-home">
+                        India (Open for Relocation)<br />
+                    </li>
+                    <li class="icon solid fa-envelope"><a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></li>
+                    <li class="icon brands fa-github"><a href="https://github.com/SahilTheCoder">github.com/SahilTheCoder</a></li>
+                    <li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/sahil-ali-714867242/">linkedin.com/in/sahil-ali-714867242/</a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Portfolio. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
