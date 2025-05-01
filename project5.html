@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #e6f0ff, #fefefe);
+      background: #f7f7f7;
       color: #333;
       margin: 0;
       padding: 20px;
@@ -15,31 +15,35 @@
     }
 
     h1, h2, h3 {
-      color: #1a3c6d;
+      color: #1c3b6d;
       text-align: center;
     }
 
     h1 {
       font-size: 2.5em;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      color: #3c7fa8;
     }
 
     nav {
-      background-color: #1a3c6d;
+      background-color: #3c7fa8;
       padding: 10px;
       text-align: center;
       margin-bottom: 30px;
+      border-radius: 5px;
     }
 
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background-color: #2a4c73;
     }
 
     section {
@@ -66,12 +70,12 @@
     }
 
     th {
-      background-color: #dbe9ff;
+      background-color: #e3f0f9;
       font-weight: bold;
     }
 
     .schedule td:first-child {
-      width: 25%;
+      width: 30%;
       font-weight: bold;
       background: #f0f8ff;
     }
@@ -81,8 +85,35 @@
     }
 
     .highlight {
-      background-color: #e0ffe0;
+      background-color: #d1f7e1;
       font-weight: bold;
+    }
+
+    .recipe-card {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .recipe-card h4 {
+      margin-bottom: 10px;
+      color: #1c3b6d;
+    }
+
+    .recipe-card ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .recipe-card ul li {
+      margin-bottom: 5px;
+    }
+
+    .recipe-card ul li::before {
+      content: "• ";
+      color: #3c7fa8;
     }
 
     @media screen and (max-width: 768px) {
@@ -99,7 +130,7 @@
       }
 
       .schedule td:first-child {
-        width: 30%;
+        width: 35%;
       }
     }
   </style>
@@ -117,71 +148,89 @@
   </nav>
 
   <section id="week1">
-    <h2>Week 1 Overview (May 1 - May 7)</h2>
-    <p>Focus on foundation building: light workouts, posture, balanced diet, and daily skincare.</p>
+    <h2>Week 1 Overview</h2>
+    <p>Focus on building a solid foundation for a strong physique. Emphasize fat loss while maintaining muscle, and set the stage for more intense workouts in the coming weeks. Also, start the skincare routine and posture improvement.</p>
   </section>
 
   <section id="routine">
-    <h2>Daily Routine (May 1 - May 7)</h2>
+    <h2>Daily Routine</h2>
     <table class="schedule">
       <thead>
         <tr><th>Time</th><th>Activity</th></tr>
       </thead>
       <tbody>
-        <tr><td>7:00 AM</td><td>Wake up + Hydration (Warm lemon water)</td></tr>
-        <tr><td>7:30 AM</td><td>Skincare Routine</td></tr>
-        <tr><td>8:00 AM</td><td>Breakfast: 2 boiled eggs + Green tea</td></tr>
-        <tr><td>9:00 AM</td><td>Work/Study (Maintain proper posture)</td></tr>
-        <tr><td>1:00 PM</td><td>Lunch: Whole grain rotis + Vegetables + Salad</td></tr>
-        <tr><td>2:00 PM</td><td>Mobility stretch session</td></tr>
-        <tr><td>5:00 PM</td><td>Evening Snack: Coconut water + Roasted nuts</td></tr>
-        <tr><td>6:30 PM</td><td>Main Workout: Walk + Bodyweight exercises</td></tr>
-        <tr><td>8:00 PM</td><td>Dinner: Grilled paneer with salad</td></tr>
-        <tr><td>9:30 PM</td><td>Evening Skincare Routine</td></tr>
+        <tr><td>6:00 AM</td><td>Wake up + Hydration (Warm lemon water)</td></tr>
+        <tr><td>7:00 AM</td><td>Skincare Routine + Breathing Exercises</td></tr>
+        <tr><td>7:30 AM</td><td>Breakfast: Protein Oats + Green Tea</td></tr>
+        <tr><td>10:00 AM</td><td>Snack: Fruits or Nuts</td></tr>
+        <tr><td>12:00 PM</td><td>Lunch: Grilled Chicken + Quinoa Salad</td></tr>
+        <tr><td>2:00 PM</td><td>Mobility exercises + Light stretching</td></tr>
+        <tr><td>5:00 PM</td><td>Snack: Protein Shake</td></tr>
+        <tr><td>6:30 PM</td><td>Workout (Full Body Workout with Compound Movements)</td></tr>
+        <tr><td>8:00 PM</td><td>Dinner: Grilled Salmon + Veggies</td></tr>
+        <tr><td>9:30 PM</td><td>Evening Skincare Routine + Relaxation</td></tr>
         <tr><td>10:00 PM</td><td>Sleep</td></tr>
       </tbody>
     </table>
   </section>
 
   <section id="nutrition">
-    <h2>Nutrition & Detoxification</h2>
-    <ul>
-      <li><strong>Morning:</strong> Lemon water, almonds, seasonal fruit</li>
-      <li><strong>Breakfast:</strong> Eggs/toast + Green tea</li>
-      <li><strong>Mid-morning:</strong> Fruit or roasted chana</li>
-      <li><strong>Lunch:</strong> Rotis + Veg + Salad</li>
-      <li><strong>Evening:</strong> Coconut water or detox water + Nuts</li>
-      <li><strong>Dinner:</strong> Grilled paneer or khichdi</li>
-      <li><strong>Pre-sleep:</strong> Golden milk or warm water</li>
-    </ul>
+    <h2>Nutrition & Meal Plan</h2>
+    <p>Focus on building lean muscle mass while staying within a healthy weight range of 76-78 kg. The meals are designed to support muscle growth and recovery while maintaining a balanced diet.</p>
+
+    <div class="recipe-card">
+      <h4>Protein-Packed Breakfast: Protein Oats</h4>
+      <ul>
+        <li>1/2 cup oats</li>
+        <li>1 scoop whey protein powder</li>
+        <li>1 tablespoon chia seeds</li>
+        <li>1/4 cup almond milk</li>
+        <li>1/2 banana (sliced)</li>
+        <li>1 tablespoon peanut butter</li>
+      </ul>
+      <p>Instructions: Cook oats in almond milk, then mix in protein powder and top with banana and peanut butter.</p>
+    </div>
+
+    <div class="recipe-card">
+      <h4>Lunch: Grilled Chicken & Quinoa Salad</h4>
+      <ul>
+        <li>100g grilled chicken breast</li>
+        <li>1/2 cup quinoa</li>
+        <li>1 cup mixed greens</li>
+        <li>1 tablespoon olive oil</li>
+        <li>1/2 cucumber (sliced)</li>
+        <li>1 tablespoon lemon juice</li>
+      </ul>
+      <p>Instructions: Grill chicken, cook quinoa, and mix all ingredients into a fresh salad with olive oil and lemon dressing.</p>
+    </div>
   </section>
 
   <section id="skin">
-    <h2>Skin, Face & Stretch Mark Care</h2>
+    <h2>Skincare Routine</h2>
     <ul>
-      <li><strong>Morning:</strong> Neem wash → Rose water → Aloe moisturizer</li>
-      <li><strong>Evening:</strong> Aloe gel + Vitamin E oil massage</li>
-      <li><strong>Bi-weekly:</strong> Honey + Lemon + Turmeric face mask</li>
+      <li><strong>Morning:</strong> Wash face with a gentle cleanser → Apply toner → Aloe Vera Gel</li>
+      <li><strong>Evening:</strong> Remove makeup → Cleanse → Vitamin E oil massage</li>
+      <li><strong>Weekly:</strong> Face mask with honey, lemon, and turmeric</li>
     </ul>
   </section>
 
   <section id="voice">
-    <h2>Voice & Posture Training</h2>
+    <h2>Voice & Posture</h2>
     <ul>
-      <li><strong>Voice:</strong> Breathing, humming, Om, lip vibrations</li>
-      <li><strong>Posture:</strong> Chest-opening stretches, shoulder mobility</li>
+      <li><strong>Voice:</strong> Breathing exercises, humming, and deep voice training</li>
+      <li><strong>Posture:</strong> Regular posture checks, neck and shoulder stretches, and core strengthening</li>
     </ul>
   </section>
 
   <section id="progress">
-    <h2>Physical Progress Tracker (Week 1)</h2>
+    <h2>Physical Progress Tracker</h2>
     <table>
       <thead>
-        <tr><th>Week</th><th>Waist</th><th>Biceps</th><th>Chest</th><th>Weight</th></tr>
+        <tr><th>Week</th><th>Chest</th><th>Biceps</th><th>Waist</th><th>Weight</th></tr>
       </thead>
       <tbody>
-        <tr><td>Week 0</td><td>34.0"</td><td>13.5"</td><td>38.5"</td><td>73 kg</td></tr>
-        <tr class="highlight"><td>Week 1</td><td>33.5"</td><td>13.8"</td><td>39.0"</td><td>72.5 kg</td></tr>
+        <tr><td>Week 1</td><td>39.5"</td><td>14"</td><td>34"</td><td>76 kg</td></tr>
+        <tr><td>Week 2</td><td>39.8"</td><td>14.2"</td><td>33.5"</td><td>75.8 kg</td></tr>
       </tbody>
     </table>
   </section>
@@ -190,4 +239,4 @@
     <p>&copy; 2025 Transformation Plan. All Rights Reserved.</p>
   </footer>
 </body>
-</html>
+  </html>
