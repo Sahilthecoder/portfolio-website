@@ -1,175 +1,193 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>12-Week Body & Face Transformation Plan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #005f73;
-      --secondary: #0a9396;
-      --accent: #94d2bd;
-      --light: #e9d8a6;
-      --dark: #001219;
-    }* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #e6f0ff, #fefefe);
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to right, #f8fbff, #e6f4f1);
-  color: var(--dark);
-  padding: 20px;
-  line-height: 1.6;
-}
+    h1, h2, h3 {
+      color: #1a3c6d;
+      text-align: center;
+    }
 
-h1, h2, h3 {
-  color: var(--primary);
-  text-align: center;
-  margin-bottom: 20px;
-}
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
 
-nav {
-  background-color: var(--primary);
-  padding: 15px;
-  text-align: center;
-  margin-bottom: 40px;
-}
+    nav {
+      background-color: #1a3c6d;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
 
-nav a:hover {
-  color: var(--accent);
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-section {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  margin-bottom: 40px;
-}
+    section {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      overflow-x: auto;
+      display: block;
+    }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      white-space: nowrap;
+    }
 
-th {
-  background-color: var(--light);
-}
+    th {
+      background-color: #dbe9ff;
+      font-weight: bold;
+    }
 
-.highlight {
-  background-color: #e0ffe0;
-  font-weight: bold;
-}
+    .schedule td:first-child {
+      width: 25%;
+      font-weight: bold;
+      background: #f0f8ff;
+    }
 
-ul {
-  list-style: square;
-  padding-left: 20px;
-}
+    ul li {
+      margin-bottom: 10px;
+    }
 
-.card {
-  background: var(--accent);
-  color: #003;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+    .highlight {
+      background-color: #e0ffe0;
+      font-weight: bold;
+    }
 
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-}
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
 
+      section {
+        padding: 15px;
+      }
+
+      table, th, td {
+        font-size: 0.9em;
+      }
+
+      .schedule td:first-child {
+        width: 30%;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>12-Week Body & Face Transformation Plan</h1>  <nav>
+  <h1>12-Week Body & Face Transformation Plan</h1>
+
+  <nav>
+    <a href="#week1">Week 1</a>
     <a href="#routine">Routine</a>
     <a href="#nutrition">Nutrition</a>
-    <a href="#recipes">Recipes</a>
     <a href="#skin">Skincare</a>
+    <a href="#voice">Voice & Posture</a>
     <a href="#progress">Progress</a>
-  </nav>  <section id="routine">
-    <h2>Daily Routine</h2>
-    <div class="card">7:00 AM - Wake up, hydrate with lemon water</div>
-    <div class="card">7:30 AM - Morning skincare (see details below)</div>
-    <div class="card">8:00 AM - Breakfast: 2 boiled eggs + Green tea</div>
-    <div class="card">9:00 AM - Work with upright posture</div>
-    <div class="card">1:00 PM - Lunch: Whole grain rotis + Veggies + Salad</div>
-    <div class="card">2:00 PM - Stretching and posture correction</div>
-    <div class="card">6:30 PM - Walk + bodyweight workout</div>
-    <div class="card">8:00 PM - Dinner: Grilled paneer + Soup</div>
-    <div class="card">9:30 PM - Evening skincare (see below)</div>
-    <div class="card">10:00 PM - Sleep</div>
-  </section>  <section id="nutrition">
-    <h2>Nutrition & Detox</h2>
-    <ul>
-      <li>Start your day with lemon water + 5 soaked almonds</li>
-      <li>Eat seasonal fruits and avoid processed sugar</li>
-      <li>Stay hydrated with at least 3 liters of water daily</li>
-    </ul>
-  </section>  <section id="recipes">
-    <h2>Healthy Recipes</h2>
-    <ul>
-      <li><strong>Detox Water:</strong> Mix cucumber, lemon, and mint in 1L of water, refrigerate overnight.</li>
-      <li><strong>Grilled Paneer:</strong> Marinate paneer in curd, spices, and lemon. Grill until golden.</li>
-      <li><strong>Protein Smoothie:</strong> Blend banana, oats, peanut butter, and milk.</li>
-    </ul>
-  </section>  <section id="skin">
-    <h2>Detailed Skincare Routine</h2>
-    <h3>Morning Routine</h3>
-    <ul>
-      <li>Cleanser: Neem-based or tea tree face wash</li>
-      <li>Toner: Rose water spray</li>
-      <li>Moisturizer: Aloe vera gel or lightweight gel cream</li>
-      <li>Sunscreen: SPF 30+ even when indoors</li>
-    </ul>
-    <h3>Evening Routine</h3>
-    <ul>
-      <li>Cleanser: Mild foaming face wash</li>
-      <li>Treatment: Vitamin E oil massage on face and stretch marks</li>
-      <li>Moisturizer: Aloe vera + glycerin blend</li>
-    </ul>
-    <h3>Twice Weekly</h3>
-    <ul>
-      <li>Mask: Honey + lemon + turmeric for brightening</li>
-      <li>Steam: Herbal steam with tulsi leaves</li>
-    </ul>
-  </section>  <section id="progress">
-    <h2>Body Measurement Tracker</h2>
-    <table>
+  </nav>
+
+  <section id="week1">
+    <h2>Week 1 Overview (May 1 - May 7)</h2>
+    <p>Focus on foundation building: light workouts, posture, balanced diet, and daily skincare.</p>
+  </section>
+
+  <section id="routine">
+    <h2>Daily Routine (May 1 - May 7)</h2>
+    <table class="schedule">
       <thead>
-        <tr><th>Measurement</th><th>Week 0</th><th>Week 1</th></tr>
+        <tr><th>Time</th><th>Activity</th></tr>
       </thead>
       <tbody>
-        <tr><td>Waist</td><td>34.0"</td><td>33.5"</td></tr>
-        <tr><td>Biceps</td><td>13.5"</td><td>13.8"</td></tr>
-        <tr><td>Chest</td><td>38.5"</td><td>39.0"</td></tr>
-        <tr><td>Hand Length</td><td colspan="2">34.0"</td></tr>
-        <tr><td>Weight</td><td>73 kg</td><td>72.5 kg</td></tr>
+        <tr><td>7:00 AM</td><td>Wake up + Hydration (Warm lemon water)</td></tr>
+        <tr><td>7:30 AM</td><td>Skincare Routine</td></tr>
+        <tr><td>8:00 AM</td><td>Breakfast: 2 boiled eggs + Green tea</td></tr>
+        <tr><td>9:00 AM</td><td>Work/Study (Maintain proper posture)</td></tr>
+        <tr><td>1:00 PM</td><td>Lunch: Whole grain rotis + Vegetables + Salad</td></tr>
+        <tr><td>2:00 PM</td><td>Mobility stretch session</td></tr>
+        <tr><td>5:00 PM</td><td>Evening Snack: Coconut water + Roasted nuts</td></tr>
+        <tr><td>6:30 PM</td><td>Main Workout: Walk + Bodyweight exercises</td></tr>
+        <tr><td>8:00 PM</td><td>Dinner: Grilled paneer with salad</td></tr>
+        <tr><td>9:30 PM</td><td>Evening Skincare Routine</td></tr>
+        <tr><td>10:00 PM</td><td>Sleep</td></tr>
       </tbody>
     </table>
-  </section>  <footer style="text-align:center; margin-top:50px; font-size:0.9em;">
-    &copy; 2025 Sahil Ali - All Rights Reserved.
+  </section>
+
+  <section id="nutrition">
+    <h2>Nutrition & Detoxification</h2>
+    <ul>
+      <li><strong>Morning:</strong> Lemon water, almonds, seasonal fruit</li>
+      <li><strong>Breakfast:</strong> Eggs/toast + Green tea</li>
+      <li><strong>Mid-morning:</strong> Fruit or roasted chana</li>
+      <li><strong>Lunch:</strong> Rotis + Veg + Salad</li>
+      <li><strong>Evening:</strong> Coconut water or detox water + Nuts</li>
+      <li><strong>Dinner:</strong> Grilled paneer or khichdi</li>
+      <li><strong>Pre-sleep:</strong> Golden milk or warm water</li>
+    </ul>
+  </section>
+
+  <section id="skin">
+    <h2>Skin, Face & Stretch Mark Care</h2>
+    <ul>
+      <li><strong>Morning:</strong> Neem wash → Rose water → Aloe moisturizer</li>
+      <li><strong>Evening:</strong> Aloe gel + Vitamin E oil massage</li>
+      <li><strong>Bi-weekly:</strong> Honey + Lemon + Turmeric face mask</li>
+    </ul>
+  </section>
+
+  <section id="voice">
+    <h2>Voice & Posture Training</h2>
+    <ul>
+      <li><strong>Voice:</strong> Breathing, humming, Om, lip vibrations</li>
+      <li><strong>Posture:</strong> Chest-opening stretches, shoulder mobility</li>
+    </ul>
+  </section>
+
+  <section id="progress">
+    <h2>Physical Progress Tracker (Week 1)</h2>
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Waist</th><th>Biceps</th><th>Chest</th><th>Weight</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Week 0</td><td>34.0"</td><td>13.5"</td><td>38.5"</td><td>73 kg</td></tr>
+        <tr class="highlight"><td>Week 1</td><td>33.5"</td><td>13.8"</td><td>39.0"</td><td>72.5 kg</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer style="text-align: center; margin-top: 40px;">
+    <p>&copy; 2025 Transformation Plan. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
