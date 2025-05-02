@@ -156,7 +156,9 @@
     function getDecision() {
       const input = document.getElementById("decision-question").value;
       const response = document.getElementById("decision-response");
-      if (input.trim()) {
+
+      if (input.trim() !== "") {
+        // Simulated AI decision (You can replace this with real AI integration if needed)
         response.innerHTML = "AI Suggestion: Focus on what aligns with your main goal today. | मुख्य लक्ष्य के अनुसार कार्य करें।";
       } else {
         response.innerHTML = "Please enter a question. | कृपया एक प्रश्न दर्ज करें।";
