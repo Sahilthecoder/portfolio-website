@@ -1,110 +1,167 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Daily Decision System</title>
-  <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #111;
+      --card-bg: #ffffff;
+      --border: #e0e0e0;
+    }
+
     body {
-      font-family: 'Mukta', sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 20px;
-    }
-    h1, h2 {
-      color: #333;
-    }
-    .section {
-      background-color: #fff;
-      padding: 15px;
       margin-bottom: 20px;
-      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
     label {
+      font-weight: 500;
       display: block;
       margin-top: 10px;
     }
-    input[type="text"], textarea {
+
+    input[type="text"] {
       width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 4px;
+      padding: 10px;
+      margin-top: 8px;
       border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
     }
+
     button {
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #007BFF;
-      color: #fff;
+      margin-top: 12px;
+      padding: 10px 16px;
+      font-size: 1rem;
+      background-color: #111;
+      color: white;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
     }
+
     button:hover {
-      background-color: #0056b3;
+      background-color: #333;
+    }
+
+    #decision-response {
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    details {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.3rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>🧠 AI Daily Decision System | एआई दैनिक निर्णय प्रणाली</h1>
 
-  <h1>🧠 AI Daily Decision System | एआई दैनिक निर्णय प्रणाली</h1>
+    <div class="card">
+      <h2>📅 Dashboard | डैशबोर्ड</h2>
+      <ul>
+        <li><strong>Top Priorities | प्रमुख कार्य:</strong> Fitness, Project, Reading</li>
+        <li><strong>Current Task | वर्तमान कार्य:</strong> Check reports</li>
+        <li><strong>Next Task | अगला कार्य:</strong> Prepare deck</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>📅 Today's Dashboard | आज का डैशबोर्ड</h2>
-    <p><strong>Top 3 Priorities | शीर्ष 3 प्राथमिकताएं:</strong></p>
-    <ul>
-      <li>Complete project report | परियोजना रिपोर्ट पूरी करें</li>
-      <li>Workout session at 6 PM | शाम 6 बजे वर्कआउट सत्र</li>
-      <li>Read 20 pages of a book | किताब के 20 पृष्ठ पढ़ें</li>
-    </ul>
-    <p><strong>Current Task | वर्तमान कार्य:</strong> Reviewing client feedback | ग्राहक प्रतिक्रिया की समीक्षा</p>
-    <p><strong>Next Task | अगला कार्य:</strong> Prepare presentation slides | प्रस्तुति स्लाइड तैयार करें</p>
-  </div>
+    <div class="card">
+      <h2>📥 Decision Inbox | निर्णय इनबॉक्स</h2>
+      <label for="decision-question">Your Question | आपका सवाल:</label>
+      <input type="text" id="decision-question" placeholder="Should I work or rest? | मुझे काम करना चाहिए या आराम?">
+      <button onclick="getDecision()">Get AI Decision | एआई निर्णय प्राप्त करें</button>
+      <p id="decision-response"></p>
+    </div>
 
-  <div class="section">
-    <h2>📥 Decision Inbox | निर्णय इनबॉक्स</h2>
-    <label for="decision-question">Enter your question | अपना प्रश्न दर्ज करें:</label>
-    <input type="text" id="decision-question" placeholder="e.g., Should I attend the meeting? | क्या मुझे बैठक में भाग लेना चाहिए?">
-    <button onclick="getDecision()">Get AI Decision | एआई निर्णय प्राप्त करें</button>
-    <p id="decision-response"></p>
-  </div>
+    <div class="card">
+      <details>
+        <summary>🏋️ Fitness Goals | फिटनेस लक्ष्य</summary>
+        <p>Track weight, exercises & meals daily.</p>
+      </details>
+    </div>
 
-  <div class="section">
-    <h2>🏋️ Fitness Goals | फिटनेस लक्ष्य</h2>
-    <p>Track your workouts and progress here. | यहां अपने वर्कआउट और प्रगति को ट्रैक करें।</p>
-    <!-- Additional fitness tracking elements can be added here -->
-  </div>
+    <div class="card">
+      <details>
+        <summary>🧴 Skincare Routine | स्किनकेयर</summary>
+        <p>Follow AM/PM routine and hydration.</p>
+      </details>
+    </div>
 
-  <div class="section">
-    <h2>🧴 Skincare Routine | स्किनकेयर रूटीन</h2>
-    <p>Maintain your skincare schedule. | अपनी स्किनकेयर अनुसूची बनाए रखें।</p>
-    <!-- Additional skincare routine elements can be added here -->
-  </div>
+    <div class="card">
+      <details>
+        <summary>📚 Learning | सीखना</summary>
+        <p>Complete daily learning tasks, 30–60 min.</p>
+      </details>
+    </div>
 
-  <div class="section">
-    <h2>📚 Learning Plan | सीखने की योजना</h2>
-    <p>Keep up with your daily learning goals. | अपने दैनिक सीखने के लक्ष्यों के साथ बने रहें।</p>
-    <!-- Additional learning plan elements can be added here -->
-  </div>
-
-  <div class="section">
-    <h2>📊 Weekly Intelligence Report | साप्ताहिक बुद्धिमत्ता रिपोर्ट</h2>
-    <p>Summary of your week's performance. | आपके सप्ताह के प्रदर्शन का सारांश।</p>
-    <!-- Weekly report summary can be added here -->
+    <div class="card">
+      <details>
+        <summary>📊 Weekly Report | साप्ताहिक रिपोर्ट</summary>
+        <p>Review weekly progress and improve routine.</p>
+      </details>
+    </div>
   </div>
 
   <script>
     function getDecision() {
-      const question = document.getElementById('decision-question').value;
-      const response = document.getElementById('decision-response');
-      // Placeholder for AI decision logic
-      if(question.trim() !== "") {
-        response.textContent = "AI Decision: Based on your current priorities, attending the meeting is recommended. | एआई निर्णय: आपकी वर्तमान प्राथमिकताओं के आधार पर, बैठक में भाग लेना अनुशंसित है।";
+      const input = document.getElementById("decision-question").value;
+      const response = document.getElementById("decision-response");
+      if (input.trim()) {
+        response.innerHTML = "AI Suggestion: Focus on what aligns with your main goal today. | मुख्य लक्ष्य के अनुसार कार्य करें।";
       } else {
-        response.textContent = "Please enter a question. | कृपया एक प्रश्न दर्ज करें।";
+        response.innerHTML = "Please enter a question. | कृपया एक प्रश्न दर्ज करें।";
       }
     }
   </script>
-
 </body>
 </html>
