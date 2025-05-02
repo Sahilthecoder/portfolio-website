@@ -1,181 +1,110 @@
-<!DOCTYPE HTML>
-<!--
-	Data Analyst Portfolio
-	sahilkhan36985@gmail.com
--->
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="hi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-    <meta name="description" content="Sahil Ali's Data Analyst Portfolio – showcasing automation projects using SQL, Google Sheets, and data insights." />
-    <meta name="author" content="Sahil Ali" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Social Media Preview -->
-    <meta property="og:title" content="Sahil Ali – Data Analyst Portfolio" />
-    <meta property="og:description" content="Explore how Sahil built efficient solutions using SQL, Google Sheets, and smart analytics." />
-    <meta property="og:image" content="https://yourdomain.com/images/Attendance.avif" />
-    <meta property="og:url" content="https://yourdomain.com/project3.html" />
-    <meta property="og:type" content="website" />
-
-    <!-- Title -->
-    <title>Sahil Ali - Data Analyst Portfolio</title>
-
-    <!-- Add Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" />
-
-    <!-- Favicon (optional) -->
-    <link rel="icon" href="images/favicon.avif" type="image/avif">
-
-    <!-- Your CSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <meta charset="UTF-8">
+  <title>AI Daily Decision System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Mukta', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .section {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
+<body>
 
-	<body class="is-preload">
+  <h1>🧠 AI Daily Decision System | एआई दैनिक निर्णय प्रणाली</h1>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+  <div class="section">
+    <h2>📅 Today's Dashboard | आज का डैशबोर्ड</h2>
+    <p><strong>Top 3 Priorities | शीर्ष 3 प्राथमिकताएं:</strong></p>
+    <ul>
+      <li>Complete project report | परियोजना रिपोर्ट पूरी करें</li>
+      <li>Workout session at 6 PM | शाम 6 बजे वर्कआउट सत्र</li>
+      <li>Read 20 pages of a book | किताब के 20 पृष्ठ पढ़ें</li>
+    </ul>
+    <p><strong>Current Task | वर्तमान कार्य:</strong> Reviewing client feedback | ग्राहक प्रतिक्रिया की समीक्षा</p>
+    <p><strong>Next Task | अगला कार्य:</strong> Prepare presentation slides | प्रस्तुति स्लाइड तैयार करें</p>
+  </div>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">DATA ANALYST PORTFOLIO</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+  <div class="section">
+    <h2>📥 Decision Inbox | निर्णय इनबॉक्स</h2>
+    <label for="decision-question">Enter your question | अपना प्रश्न दर्ज करें:</label>
+    <input type="text" id="decision-question" placeholder="e.g., Should I attend the meeting? | क्या मुझे बैठक में भाग लेना चाहिए?">
+    <button onclick="getDecision()">Get AI Decision | एआई निर्णय प्राप्त करें</button>
+    <p id="decision-response"></p>
+  </div>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-								<li><a href="aboutme.html"><i class="fa fa-user"></i> About Me</a></li>
-								<li><a href="experience.html"><i class="fa fa-briefcase"></i> Experience</a></li>
-								<li><a href="projects.html"><i class="fa fa-code"></i> Projects</a></li>
-								<li><a href="#footer"><i class="fa fa-envelope"></i> Contact</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+  <div class="section">
+    <h2>🏋️ Fitness Goals | फिटनेस लक्ष्य</h2>
+    <p>Track your workouts and progress here. | यहां अपने वर्कआउट और प्रगति को ट्रैक करें।</p>
+    <!-- Additional fitness tracking elements can be added here -->
+  </div>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
+  <div class="section">
+    <h2>🧴 Skincare Routine | स्किनकेयर रूटीन</h2>
+    <p>Maintain your skincare schedule. | अपनी स्किनकेयर अनुसूची बनाए रखें।</p>
+    <!-- Additional skincare routine elements can be added here -->
+  </div>
 
-								<h2>Project 6</h2>
-								<h3>Secrets of Severus Snape: Web Scraping and Sentiment Analysis  ||  Python</h3>
-								<p></p>
-							</div>
-						</header>
+  <div class="section">
+    <h2>📚 Learning Plan | सीखने की योजना</h2>
+    <p>Keep up with your daily learning goals. | अपने दैनिक सीखने के लक्ष्यों के साथ बने रहें।</p>
+    <!-- Additional learning plan elements can be added here -->
+  </div>
 
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
+  <div class="section">
+    <h2>📊 Weekly Intelligence Report | साप्ताहिक बुद्धिमत्ता रिपोर्ट</h2>
+    <p>Summary of your week's performance. | आपके सप्ताह के प्रदर्शन का सारांश।</p>
+    <!-- Weekly report summary can be added here -->
+  </div>
 
-									<p>Remember those enchanting Saturday nights, huddled with siblings, bewitched by the cinematic wonders of Harry, Hermione, and Ron? The Harry Potter movies were more than just films; they were the cornerstone of our childhood, weaving a tapestry of friendship, courage, and magic.  From the moment Hagrid uttered those unforgettable words, "You're a wizard, Harry," we were hooked. From the bustling corridors of Hogwarts to the enchanting forbidden forest, the movies were a visual feast. </p>
+  <script>
+    function getDecision() {
+      const question = document.getElementById('decision-question').value;
+      const response = document.getElementById('decision-response');
+      // Placeholder for AI decision logic
+      if(question.trim() !== "") {
+        response.textContent = "AI Decision: Based on your current priorities, attending the meeting is recommended. | एआई निर्णय: आपकी वर्तमान प्राथमिकताओं के आधार पर, बैठक में भाग लेना अनुशंसित है।";
+      } else {
+        response.textContent = "Please enter a question. | कृपया एक प्रश्न दर्ज करें।";
+      }
+    }
+  </script>
 
-									<h3 class="major"></h3>
-									<h4>But how this fits in your puzzle?</h4>
-									<p>Businesses crave stories behind their customers, and that's where I come in! Imagine this:
-										<ul>
-										<li>Want to know how customers *really* feel about your product? I can scrape reviews, analyze the emotions, and aha! You've got a magic potion of insights to improve it.</li>
-										<li>Lost in a sea of social media comments? No worries! I can untangle the mess and reveal what people are *truly* saying.</li>
-										<li>Stuck in a marketing rut? Fear not! I can decode the most powerful words that resonate with your audience, casting spells of attraction and boosting your brand.</li>
-										</ul>
-									</p>
-
-									<h3 class="major"></h3>
-									<h2>Let's continue this journey!</h2>
-									<p></p>
-
-									<h3 class="major">Objective</h3>
-									<p>My goal was to unravel the mysteries of Professor Snape from the Harry Potter series using web scraping and sentiment analysis techniques. Through this magical coding adventure, I aimed to understand Snape's emotional landscape and uncover the most enchanted words that defined his story.</p>
-
-									<h3 class="major">Chapter 1: The Sorcery of Web Scraping</h3>
-									<p>I employed the art of web scraping to gather Snape's story from a special webpage. Picture it like sending a coded owl to fetch a letter, but instead, we fetched paragraphs filled with Snape's tales. Using magical tools like BeautifulSoup and NLTK, I transformed these paragraphs into a neat scroll, saved in a CSV file.</p>
-
-                                    <h3 class="major">Chapter 2: The Potion for Sentiment Analysis</h3>
-									<p>This is where the real magic happens! I delved into Snape's sentiments using the SentimentIntensityAnalyzer potion. By assigning magical labels like 'angry' or 'protective,' I unveiled the emotions that weave through Snape's narrative. The results painted a captivating picture-Snape's worries took the lead, followed by contempt, anger, and a strong sense of protectiveness.</p>
-
-									<h3 class="major">Chapter 3: Discovering the Most Magical Words</h3>
-									<p>Summoning the top words echoing in digital Hogwarts, I created a playlist of wizarding hits: Snape, Harry, Dumbledore, Voldemort, and Lily. It's like decoding Snape's favorite spells. Filtering mundane words and lemmatizing for simplicity, I uncovered the essence of Snape's story.</p>
-
-                                    <h3 class="major">Key Insights: </h3>
-									<h4>Snape's Emotional Landscape</h4>
-                                    <p>The sentiment analysis potion unveiled the layers of Snape's emotions. From the depths of worry to the heights of
-                                     protectiveness, Snape's sentiments paint a portrait of a character as complex as the enchanted dungeons of
-                                     Hogwarts.</p>
-
-                                    <ul>
-                                     <li>Worry takes the lead with 22.51%, reflecting Snape's perpetual concern in the wizarding saga.</li>
-                                     <li>Contempt and anger follow closely at 19.32% and 14.94%, capturing Snape's moments of disdain and frustration.
-                                     </li>
-                                     <li>Protectiveness stands tall at 10.06%, showcasing the guardian within Snape.</li>
-                                      <li>Sarcasm, sacrifice, ambiguity, and affection weave through his narrative, each adding a unique hue to the canvas
-                                        of his emotions.</li>
-                                    </ul>
-
-                                    <h4>Snape's Incantations - Top 5 Magical Words</h4>
-
-                                    <ul>
-									  <li>The word 'Snape' appears 703 times. As expected, the enigmatic Potions Master is at the center of his own tale.</li>
-                                      <li>Harry, Dumbledore, and Voldemort make appearances, emphasizing the interconnectedness of Snape's story with the
-                                       broader wizarding world.</li>
-                                       <li>The name 'Lily' blooms, reminding us of the poignant ties woven into Snape's complex narrative.</li>
-                                      </ul>
-
-									<h3 class="major">Conclusion: </h3>
-									<p>In this magical coding journey, Snape's layers unfolded like a digital scroll. The code spilled the tea on Snape's feelings and the words that made him the wizard we love (and maybe secretly roll our eyes at). It's like unlocking the secrets of the Half-Blood Prince himself!</p>
-
-                                    <a href="https://github.com/muskan0830/SECRETS-OF-SEVERUS-SNAPE" class="special"><i class="fab fa-github"></i> See Code here!</a>
-                                    <a href="https://www.linkedin.com/pulse/unraveling-mystique-severus-snape-web-scraping-analysis-kashyap-uhuoc%3FtrackingId=7dvvM9FVRoKvIhNRRyOY0g%253D%253D/?trackingId=7dvvM9FVRoKvIhNRRyOY0g%3D%3D" class="special"><i class="fab fa-linkedin"></i> Read my Article!</a>
-
-
-
-								</div>
-							</div>
-
-					</section>
-
-				<!-- Footer -->
-				<section id="footer">
-					<div class="inner">
-						<h2 class="major">Get in touch</h2>
-						<p>Let's chat! Your data, my brain - together we can be unstoppable.</p>
-						<ul class="contact">
-							<li class="icon solid fa-home">
-								India (Open for Relocation) <br />
-
-							</li>
-
-							<li class="icon solid fa-envelope"><a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></li>
-							<li class="icon brands fa-github"><a href="https://github.com/SahilTheCoder">github.com/SahilTheCoder</a></li>
-							<li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/sahil-ali-714867242/">linkedin.com/in/sahil-ali-714867242/</a></li>
-
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-				</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
