@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -104,64 +104,96 @@
 </head>
 <body>
   <div class="container">
-    <h1>🧠 AI Daily Decision System | एआई दैनिक निर्णय प्रणाली</h1>
+    <h1>AI Daily Decision System</h1>
 
     <div class="card">
-      <h2>📅 Dashboard | डैशबोर्ड</h2>
+      <h2>Dashboard</h2>
       <ul>
-        <li><strong>Top Priorities | प्रमुख कार्य:</strong> Fitness, Project, Reading</li>
-        <li><strong>Current Task | वर्तमान कार्य:</strong> Check reports</li>
-        <li><strong>Next Task | अगला कार्य:</strong> Prepare deck</li>
+        <li><strong>Top Priorities:</strong> Fitness, Project, Reading</li>
+        <li><strong>Current Task:</strong> Check reports</li>
+        <li><strong>Next Task:</strong> Prepare deck</li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>📥 Decision Inbox | निर्णय इनबॉक्स</h2>
-      <label for="decision-question">Your Question | आपका सवाल:</label>
-      <input type="text" id="decision-question" placeholder="Should I work or rest? | मुझे काम करना चाहिए या आराम?">
-      <button onclick="getDecision()">Get AI Decision | एआई निर्णय प्राप्त करें</button>
+      <h2>Decision Inbox</h2>
+      <label for="decision-question">Your Question:</label>
+      <input type="text" id="decision-question" placeholder="Should I work or rest?">
+      <button onclick="getDecision()">Get AI Decision</button>
       <p id="decision-response"></p>
     </div>
 
     <div class="card">
       <details>
-        <summary>🏋️ Fitness Goals | फिटनेस लक्ष्य</summary>
+        <summary>Fitness Goals</summary>
         <p>Track weight, exercises & meals daily.</p>
       </details>
     </div>
 
     <div class="card">
       <details>
-        <summary>🧴 Skincare Routine | स्किनकेयर</summary>
+        <summary>Skincare Routine</summary>
         <p>Follow AM/PM routine and hydration.</p>
       </details>
     </div>
 
     <div class="card">
       <details>
-        <summary>📚 Learning | सीखना</summary>
+        <summary>Learning</summary>
         <p>Complete daily learning tasks, 30–60 min.</p>
       </details>
     </div>
 
     <div class="card">
       <details>
-        <summary>📊 Weekly Report | साप्ताहिक रिपोर्ट</summary>
+        <summary>Weekly Report</summary>
         <p>Review weekly progress and improve routine.</p>
       </details>
     </div>
   </div>
 
   <script>
-    function getDecision() {
+    async function getDecision() {
       const input = document.getElementById("decision-question").value;
-      const response = document.getElementById("decision-response");
+      const responseElement = document.getElementById("decision-response");
 
       if (input.trim() !== "") {
-        // Simulated AI decision (You can replace this with real AI integration if needed)
-        response.innerHTML = "AI Suggestion: Focus on what aligns with your main goal today. | मुख्य लक्ष्य के अनुसार कार्य करें।";
+        // Show loading message
+        responseElement.innerHTML = "AI is processing your request...";
+
+        // Make the API call to OpenAI's ChatGPT API
+        const apiKey = "YOUR_OPENAI_API_KEY"; // Replace with your OpenAI API key
+        const apiUrl = "https://api.openai.com/v1/completions";
+
+        const headers = {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${apiKey}`,
+        };
+
+        const data = {
+          model: "text-davinci-003", // You can use other models like gpt-4 if you prefer
+          prompt: input,
+          max_tokens: 100,
+          temperature: 0.7,
+        };
+
+        try {
+          const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: headers,
+            body: JSON.stringify(data),
+          });
+
+          const responseData = await response.json();
+          const aiResponse = responseData.choices[0].text.trim();
+
+          responseElement.innerHTML = `AI Suggestion: ${aiResponse}`;
+        } catch (error) {
+          console.error("Error:", error);
+          responseElement.innerHTML = "An error occurred while fetching the response. Please try again.";
+        }
       } else {
-        response.innerHTML = "Please enter a question. | कृपया एक प्रश्न दर्ज करें।";
+        responseElement.innerHTML = "Please enter a question.";
       }
     }
   </script>
