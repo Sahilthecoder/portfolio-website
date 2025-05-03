@@ -2,241 +2,221 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12-Week Body & Face Transformation Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sahil Ali Portfolio</title>
   <style>
+    :root {
+      --primary-color: #003366;
+      --secondary-color: #ffffff;
+      --accent-color: #007bff;
+      --bg-dark: #121212;
+      --text-dark: #ffffff;
+      --text-light: #000000;
+      --transition: 0.3s ease;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f7f7f7;
-      color: #333;
       margin: 0;
-      padding: 20px;
-      line-height: 1.6;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-light);
+      transition: background-color var(--transition), color var(--transition);
     }
 
-    h1, h2, h3 {
-      color: #1c3b6d;
-      text-align: center;
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
     }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #3c7fa8;
-    }
-
-    nav {
-      background-color: #3c7fa8;
-      padding: 10px;
-      text-align: center;
-      margin-bottom: 30px;
-      border-radius: 5px;
+    header {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     nav a {
-      color: white;
+      margin: 0 1rem;
+      color: #fff;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
-      padding: 10px;
-      border-radius: 5px;
     }
 
-    nav a:hover {
-      background-color: #2a4c73;
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 150px;
+      border-radius: 50%;
     }
 
     section {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-bottom: 30px;
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      overflow-x: auto;
-      display: block;
+    h2 {
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
     }
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-      white-space: nowrap;
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 5px;
+      margin-top: 1rem;
+      text-decoration: none;
+      transition: background var(--transition);
     }
 
-    th {
-      background-color: #e3f0f9;
-      font-weight: bold;
+    .btn:hover {
+      background: #0056b3;
     }
 
-    .schedule td:first-child {
-      width: 30%;
-      font-weight: bold;
-      background: #f0f8ff;
+    .project, .experience {
+      margin-top: 1rem;
     }
 
-    ul li {
-      margin-bottom: 10px;
+    .contact-info a {
+      display: inline-block;
+      margin: 0.5rem 1rem 0 0;
+      color: var(--accent-color);
+      text-decoration: none;
     }
 
-    .highlight {
-      background-color: #d1f7e1;
-      font-weight: bold;
+    footer {
+      background: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
 
-    .recipe-card {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .theme-toggle, .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent-color);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background var(--transition);
     }
 
-    .recipe-card h4 {
-      margin-bottom: 10px;
-      color: #1c3b6d;
+    .scroll-top {
+      right: 70px;
+      display: none;
     }
 
-    .recipe-card ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .recipe-card ul li {
-      margin-bottom: 5px;
-    }
-
-    .recipe-card ul li::before {
-      content: "• ";
-      color: #3c7fa8;
-    }
-
-    @media screen and (max-width: 768px) {
-      h1 {
-        font-size: 2em;
-      }
-
-      section {
-        padding: 15px;
-      }
-
-      table, th, td {
-        font-size: 0.9em;
-      }
-
-      .schedule td:first-child {
-        width: 35%;
+    @media (max-width: 768px) {
+      nav {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-  <h1>12-Week Body & Face Transformation Plan</h1>
 
-  <nav>
-    <a href="#week1">Week 1</a>
-    <a href="#routine">Routine</a>
-    <a href="#nutrition">Nutrition</a>
-    <a href="#skin">Skincare</a>
-    <a href="#voice">Voice & Posture</a>
-    <a href="#progress">Progress</a>
-  </nav>
+  <header>
+    <h1>Sahil Ali</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <section id="week1">
-    <h2>Week 1 Overview</h2>
-    <p>Focus on building a solid foundation for a strong physique. Emphasize fat loss while maintaining muscle, and set the stage for more intense workouts in the coming weeks. Also, start the skincare routine and posture improvement.</p>
+  <section class="hero">
+    <img src="https://res.cloudinary.com/dlbxotngq/image/upload/v1745295730/WhatsApp_Image_2025-04-22_at_02.36.52_bd29328a_gsrlh8.jpg" alt="Sahil Ali" />
+    <h2>Inventory Specialist & Data Analyst</h2>
+    <p>4+ years of experience in inventory management, vendor coordination, and data-driven decision-making. Skilled in Excel, Tableau, and reporting tools.</p>
+    <a class="btn" href="https://sahilthecoder.github.io/cv/Sahil_Ali_CV.pdf" target="_blank">Download CV</a>
   </section>
 
-  <section id="routine">
-    <h2>Daily Routine</h2>
-    <table class="schedule">
-      <thead>
-        <tr><th>Time</th><th>Activity</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>6:00 AM</td><td>Wake up + Hydration (Warm lemon water)</td></tr>
-        <tr><td>7:00 AM</td><td>Skincare Routine + Breathing Exercises</td></tr>
-        <tr><td>7:30 AM</td><td>Breakfast: Protein Oats + Green Tea</td></tr>
-        <tr><td>10:00 AM</td><td>Snack: Fruits or Nuts</td></tr>
-        <tr><td>12:00 PM</td><td>Lunch: Grilled Chicken + Quinoa Salad</td></tr>
-        <tr><td>2:00 PM</td><td>Mobility exercises + Light stretching</td></tr>
-        <tr><td>5:00 PM</td><td>Snack: Protein Shake</td></tr>
-        <tr><td>6:30 PM</td><td>Workout (Full Body Workout with Compound Movements)</td></tr>
-        <tr><td>8:00 PM</td><td>Dinner: Grilled Salmon + Veggies</td></tr>
-        <tr><td>9:30 PM</td><td>Evening Skincare Routine + Relaxation</td></tr>
-        <tr><td>10:00 PM</td><td>Sleep</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="nutrition">
-    <h2>Nutrition & Meal Plan</h2>
-    <p>Focus on building lean muscle mass while staying within a healthy weight range of 76-78 kg. The meals are designed to support muscle growth and recovery while maintaining a balanced diet.</p>
-
-    <div class="recipe-card">
-      <h4>Protein-Packed Breakfast: Protein Oats</h4>
-      <ul>
-        <li>1/2 cup oats</li>
-        <li>1 scoop whey protein powder</li>
-        <li>1 tablespoon chia seeds</li>
-        <li>1/4 cup almond milk</li>
-        <li>1/2 banana (sliced)</li>
-        <li>1 tablespoon peanut butter</li>
-      </ul>
-      <p>Instructions: Cook oats in almond milk, then mix in protein powder and top with banana and peanut butter.</p>
-    </div>
-
-    <div class="recipe-card">
-      <h4>Lunch: Grilled Chicken & Quinoa Salad</h4>
-      <ul>
-        <li>100g grilled chicken breast</li>
-        <li>1/2 cup quinoa</li>
-        <li>1 cup mixed greens</li>
-        <li>1 tablespoon olive oil</li>
-        <li>1/2 cucumber (sliced)</li>
-        <li>1 tablespoon lemon juice</li>
-      </ul>
-      <p>Instructions: Grill chicken, cook quinoa, and mix all ingredients into a fresh salad with olive oil and lemon dressing.</p>
-    </div>
-  </section>
-
-  <section id="skin">
-    <h2>Skincare Routine</h2>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I have worked at Ekam Indian Groceries (Australia), Bansal Supermarket (Surat), and as Warehouse Supervisor at DDUGKY. My focus has been on streamlining stock processes, improving vendor communications, and ensuring data accuracy.</p>
     <ul>
-      <li><strong>Morning:</strong> Wash face with a gentle cleanser → Apply toner → Aloe Vera Gel</li>
-      <li><strong>Evening:</strong> Remove makeup → Cleanse → Vitamin E oil massage</li>
-      <li><strong>Weekly:</strong> Face mask with honey, lemon, and turmeric</li>
+      <li>B.Sc. in Computer Science - MDSU University</li>
+      <li>Excel, Google Sheets, Tableau, Stock Reconciliation</li>
+      <li>Teamwork, Leadership, Reporting, Problem Solving</li>
     </ul>
   </section>
 
-  <section id="voice">
-    <h2>Voice & Posture</h2>
-    <ul>
-      <li><strong>Voice:</strong> Breathing exercises, humming, and deep voice training</li>
-      <li><strong>Posture:</strong> Regular posture checks, neck and shoulder stretches, and core strengthening</li>
-    </ul>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Zomato Sales Dashboard</h3>
+      <p>Created using Tableau & Excel to visualize customer trends and regional performance. Helped business optimize marketing and menu choices.</p>
+    </div>
+    <div class="project">
+      <h3>Bansal Supermarket Dashboard</h3>
+      <p>Designed for inventory tracking and vendor reporting. Improved stock accuracy by 15% using Excel & Google Sheets automation.</p>
+    </div>
   </section>
 
-  <section id="progress">
-    <h2>Physical Progress Tracker</h2>
-    <table>
-      <thead>
-        <tr><th>Week</th><th>Chest</th><th>Biceps</th><th>Waist</th><th>Weight</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Week 1</td><td>39.5"</td><td>14"</td><td>34"</td><td>76 kg</td></tr>
-        <tr><td>Week 2</td><td>39.8"</td><td>14.2"</td><td>33.5"</td><td>75.8 kg</td></tr>
-      </tbody>
-    </table>
+  <section id="resume">
+    <h2>Professional Experience</h2>
+    <div class="experience">
+      <h4>Inventory Specialist – Ekam Indian Groceries</h4>
+      <ul>
+        <li>Managed stock and supplier invoices across 1000+ SKUs</li>
+        <li>Improved reconciliation accuracy by 20%</li>
+      </ul>
+    </div>
+    <div class="experience">
+      <h4>Data Analyst – Bansal Supermarket</h4>
+      <ul>
+        <li>Automated daily reports and streamlined vendor coordination</li>
+        <li>Reduced overstock by 10% with data-driven restocking</li>
+      </ul>
+    </div>
   </section>
 
-  <footer style="text-align: center; margin-top: 40px;">
-    <p>&copy; 2025 Transformation Plan. All Rights Reserved.</p>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919875771550">+91 9875771550</a></p>
+      <p>Location: Rajasthan, India</p>
+      <a href="https://linkedin.com/in/sahilali" target="_blank">LinkedIn</a>
+      <a href="https://instagram.com/hey__sahilll" target="_blank">Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sahil Ali. All rights reserved.</p>
   </footer>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+  <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    const toggleTheme = () => {
+      document.body.classList.toggle('dark');
+    };
+
+    const scrollBtn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
 </body>
-  </html>
+</html>
