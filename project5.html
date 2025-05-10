@@ -1,222 +1,129 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+  Sahil Ali - Project 5 Page
+-->
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sahil Ali Portfolio</title>
-  <style>
-    :root {
-      --primary-color: #003366;
-      --secondary-color: #ffffff;
-      --accent-color: #007bff;
-      --bg-dark: #121212;
-      --text-dark: #ffffff;
-      --text-light: #000000;
-      --transition: 0.3s ease;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+  <meta name="description"
+    content="Project 5 - AI-powered decision system using GPT, Notion, and Google Sheets by Sahil Ali" />
+  <meta name="author" content="Sahil Ali" />
+  <meta name="robots" content="index, follow" />
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--secondary-color);
-      color: var(--text-light);
-      transition: background-color var(--transition), color var(--transition);
-    }
+  <title>Project 5 | Sahil Ali - Data Analyst Portfolio</title>
 
-    body.dark {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    header {
-      background: var(--primary-color);
-      color: #fff;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" />
 
-    nav a {
-      margin: 0 1rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .hero img {
-      width: 150px;
-      border-radius: 50%;
-    }
-
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.7rem 1.2rem;
-      background: var(--accent-color);
-      color: white;
-      border-radius: 5px;
-      margin-top: 1rem;
-      text-decoration: none;
-      transition: background var(--transition);
-    }
-
-    .btn:hover {
-      background: #0056b3;
-    }
-
-    .project, .experience {
-      margin-top: 1rem;
-    }
-
-    .contact-info a {
-      display: inline-block;
-      margin: 0.5rem 1rem 0 0;
-      color: var(--accent-color);
-      text-decoration: none;
-    }
-
-    footer {
-      background: var(--primary-color);
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    .theme-toggle, .scroll-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--accent-color);
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 18px;
-      cursor: pointer;
-      z-index: 1000;
-      transition: background var(--transition);
-    }
-
-    .scroll-top {
-      right: 70px;
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-    }
-  </style>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body>
 
-  <header>
-    <h1>Sahil Ali</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
+<body class="is-preload">
+
+  <!-- Page Wrapper -->
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+      <h1><a href="index.html">DATA ANALYST PORTFOLIO</a></h1>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutme.html">About Me</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+        <a href="#" class="close">Close</a>
+      </div>
     </nav>
-  </header>
 
-  <section class="hero">
-    <img src="https://res.cloudinary.com/dlbxotngq/image/upload/v1745295730/WhatsApp_Image_2025-04-22_at_02.36.52_bd29328a_gsrlh8.jpg" alt="Sahil Ali" />
-    <h2>Inventory Specialist & Data Analyst</h2>
-    <p>4+ years of experience in inventory management, vendor coordination, and data-driven decision-making. Skilled in Excel, Tableau, and reporting tools.</p>
-    <a class="btn" href="https://sahilthecoder.github.io/cv/Sahil_Ali_CV.pdf" target="_blank">Download CV</a>
-  </section>
+    <!-- Wrapper: Project 5 -->
+    <section id="wrapper">
+      <header>
+        <div class="inner">
+          <h2>Project 5</h2>
+          <h3>AI-Powered Daily Decision System (Notion + GPT + Automation)</h3>
+        </div>
+      </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I have worked at Ekam Indian Groceries (Australia), Bansal Supermarket (Surat), and as Warehouse Supervisor at DDUGKY. My focus has been on streamlining stock processes, improving vendor communications, and ensuring data accuracy.</p>
-    <ul>
-      <li>B.Sc. in Computer Science - MDSU University</li>
-      <li>Excel, Google Sheets, Tableau, Stock Reconciliation</li>
-      <li>Teamwork, Leadership, Reporting, Problem Solving</li>
-    </ul>
-  </section>
+      <!-- Content -->
+      <div class="wrapper">
+        <div class="inner">
+          <p>
+            <strong>Overview:</strong><br>
+            This AI-driven personal system is designed to automate my daily decision-making using GPT-4, Notion, and Google Sheets. It helps me plan my day, stay consistent with habits, and reduce mental load by providing smart suggestions, reminders, and productivity prompts.
+          </p>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Zomato Sales Dashboard</h3>
-      <p>Created using Tableau & Excel to visualize customer trends and regional performance. Helped business optimize marketing and menu choices.</p>
-    </div>
-    <div class="project">
-      <h3>Bansal Supermarket Dashboard</h3>
-      <p>Designed for inventory tracking and vendor reporting. Improved stock accuracy by 15% using Excel & Google Sheets automation.</p>
-    </div>
-  </section>
+          <ul>
+            <li>Auto-generates daily tasks, affirmations, and journal entries using GPT & Notion templates.</li>
+            <li>Tracks habits, goals, and reflections with visual dashboards in Google Sheets.</li>
+            <li>Uses Make.com & Zapier to sync workflows across Notion, Sheets, and email.</li>
+            <li>Reduces planning time by 70%, while improving consistency and mental clarity.</li>
+          </ul>
 
-  <section id="resume">
-    <h2>Professional Experience</h2>
-    <div class="experience">
-      <h4>Inventory Specialist – Ekam Indian Groceries</h4>
-      <ul>
-        <li>Managed stock and supplier invoices across 1000+ SKUs</li>
-        <li>Improved reconciliation accuracy by 20%</li>
-      </ul>
-    </div>
-    <div class="experience">
-      <h4>Data Analyst – Bansal Supermarket</h4>
-      <ul>
-        <li>Automated daily reports and streamlined vendor coordination</li>
-        <li>Reduced overstock by 10% with data-driven restocking</li>
-      </ul>
-    </div>
-  </section>
+          <h4>Workflow Architecture:</h4>
+          <img src="images/project5-architecture.avif" alt="AI System Architecture"
+            style="width:100%;max-width:800px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.2); margin-bottom:1em;">
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919875771550">+91 9875771550</a></p>
-      <p>Location: Rajasthan, India</p>
-      <a href="https://linkedin.com/in/sahilali" target="_blank">LinkedIn</a>
-      <a href="https://instagram.com/hey__sahilll" target="_blank">Instagram</a>
-    </div>
-  </section>
+          <h4>Notion Daily Planner Screenshot:</h4>
+          <img src="images/project5-notion.avif" alt="Notion Daily Planner"
+            style="width:100%;max-width:800px; border-radius:8px;">
 
-  <footer>
-    <p>&copy; 2025 Sahil Ali. All rights reserved.</p>
-  </footer>
+          <p><strong>Tools Used:</strong> Notion, ChatGPT, Google Sheets, Make.com, Zapier</p>
+          <p><strong>Automation Types:</strong> Daily agenda generation, journaling prompts, goal tracking, habit reminders</p>
 
-  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-  <button class="scroll-top" onclick="scrollToTop()">↑</button>
+          <ul class="actions">
+            <li><a href="https://www.notion.so/sahilkhan36985/AI-Daily-System-Demo" class="button" target="_blank">View Demo</a></li>
+            <li><a href="https://loom.com/share/fake-demo" class="button" target="_blank">Watch Walkthrough</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    const toggleTheme = () => {
-      document.body.classList.toggle('dark');
-    };
+    <!-- Footer -->
+    <section id="footer">
+      <div class="inner">
+        <h2 class="major">Get in touch</h2>
+        <p>Let's chat! Your data, my brain — together we can be unstoppable.</p>
+        <ul class="contact">
+          <li class="icon solid fa-home">
+            India (Open for Relocation)<br />
+          </li>
+          <li class="icon solid fa-envelope"><a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></li>
+          <li class="icon brands fa-github"><a href="https://github.com/SahilTheCoder">github.com/SahilTheCoder</a></li>
+          <li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/sahil-ali-714867242/">linkedin.com/in/sahil-ali</a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Portfolio. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
-    const scrollBtn = document.querySelector('.scroll-top');
-    window.addEventListener('scroll', () => {
-      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 
-    const scrollToTop = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-  </script>
 </body>
+
 </html>
