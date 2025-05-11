@@ -1,148 +1,267 @@
 <!DOCTYPE HTML>
-<!--
-	Data Analyst Portfolio
-	sahilkhan36985@gmail.com
--->
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-    <meta name="description" content="Sahil Ali's Data Analyst Portfolio – showcasing automation projects using SQL, Google Sheets, and data insights." />
-    <meta name="author" content="Sahil Ali" />
-    <meta name="robots" content="index, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Sahil Ali's real-world data analytics and AI projects-Excel dashboards, SQL automations, Tableau visualizations, and retail AI tools-built to deliver business impact." />
+  <meta name="author" content="Sahil Ali" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Projects – Sahil Ali | Data Analyst Portfolio" />
+  <meta property="og:description" content="See real-world data projects by Sahil Ali: inventory optimization, sales analytics, automation, and AI solutions for business." />
+  <meta property="og:image" content="https://sahilthecoder.github.io/images/og-projects-banner.png" />
+  <meta property="og:url" content="https://sahilthecoder.github.io/projects.html" />
+  <meta property="og:type" content="website" />
+  <title>Projects – Sahil Ali | Data Analyst Portfolio</title>
 
-    <!-- Social Media Preview -->
-    <meta property="og:title" content="Sahil Ali – Data Analyst Portfolio" />
-    <meta property="og:description" content="Explore how Sahil built efficient solutions using SQL, Google Sheets, and smart analytics." />
-    <meta property="og:image" content="https://yourdomain.com/images/Attendance.avif" />
-    <meta property="og:url" content="https://yourdomain.com/project3.html" />
-    <meta property="og:type" content="website" />
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" />
+  <link rel="icon" href="images/favicon.png" type="image/png">
 
-    <!-- Title -->
-    <title>Sahil Ali - Data Analyst Portfolio</title>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .badge {
+      background: #4CAF50;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.85em;
+      margin-left: 8px;
+    }
+    .project-impact {
+      color: #03e703bd;
+      font-weight: 500;
+      margin-top: 6px;
+      margin-bottom: 14px;
+    }
+    .features .article-tech {
+      margin-bottom: 0.5em;
+      font-size: 0.95em;
+      color: #00eaff;
+    }
+    @media (max-width: 600px) {
+      .badge { font-size: 0.8em; padding: 2px 6px; }
+      .project-impact { margin-bottom: 12px; }
+    }
+  </style>
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Data Projects – Sahil Ali",
+    "url": "https://sahilthecoder.github.io/projects.html",
+    "author": {
+      "@type": "Person",
+      "name": "Sahil Ali"
+    },
+    "about": "Portfolio of data analytics projects using Excel, SQL, Tableau, Power BI, and automation tools.",
+    "hasPart": [
+      {
+        "@type": "CreativeWork",
+        "name": "Zomato Restaurant Expansion Analysis Dashboard",
+        "url": "https://sahilthecoder.github.io/project1.html"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Bansal Supermarket Sales Analysis",
+        "url": "https://sahilthecoder.github.io/project2.html"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Ekam Attendance Tracker",
+        "url": "https://sahilthecoder.github.io/project3.html"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Daily Cash Flow Analysis",
+        "url": "https://sahilthecoder.github.io/project4.html"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "AI Assistant for Retail",
+        "url": "https://sahilthecoder.github.io/project5.html"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Smart Dashboard Generator",
+        "url": "https://sahilthecoder.github.io/project6.html"
+      }
+    ]
+  }
+  </script>
+</head>
 
-    <!-- Add Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<body class="is-preload">
+  <div id="page-wrapper">
 
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" />
+    <!-- Header -->
+    <header id="header" class="alt">
+      <h1><a href="index.html">SAHIL ALI - DATA ANALYST PORTFOLIO</a></h1>
+      <nav><a href="#menu" aria-label="Open Menu">Menu</a></nav>
+    </header>
 
-    <!-- Favicon (optional) -->
-    <link rel="icon" href="images/favicon.avif" type="image/avif">
+    <!-- Navigation Menu -->
+    <nav id="menu" role="navigation" aria-label="Main menu">
+      <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutme.html">About Me</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li class="active"><a href="projects.html">Projects</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+        <a href="#" class="close" aria-label="Close Menu">Close</a>
+      </div>
+    </nav>
 
-    <!-- Your CSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Projects Banner -->
+    <section id="wrapper">
+      <header>
+        <div class="inner">
+          <h2>Projects</h2>
+        </div>
+      </header>
 
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+      <!-- Projects Content -->
+      <section id="four" class="wrapper alt style1">
+        <div class="inner">
+          <p>
+            My portfolio showcases real-world data and AI projects-built to save time, boost accuracy, and drive business results for retail and service businesses. <br>
+            <strong>Click a project to see details, dashboards, and the impact delivered.</strong>
+          </p>
+          <section class="features">
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+            <!-- Project 1 -->
+            <article>
+              <a href="project1.html" class="image">
+                <img src="images/Zomato.avif" alt="Zomato Restaurant Expansion Analysis Dashboard in Excel, showing city-wise growth and market insights" loading="lazy" />
+              </a>
+              <h3 class="major">Zomato Restaurant Expansion Analysis <span class="badge">Excel</span></h3>
+              <div class="article-tech">Market Strategy Dashboard</div>
+              <p>
+                Built an interactive Excel dashboard analyzing Zomato's expansion strategy across India-location insights, performance trends, and projections for future growth.
+              </p>
+              <div class="project-impact">Impact: Helped identify top-performing regions and expansion opportunities.</div>
+              <a href="project1.html" class="special" target="_blank" rel="noopener noreferrer">Explore Project</a>
+            </article>
 
-		<title>Sahil Ali - About Me</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+            <!-- Project 2 -->
+            <article>
+              <a href="project2.html" class="image">
+                <img src="images/Bansal Supermarket.avif" alt="Bansal Supermarket Sales Analysis Tableau Dashboard, sales trends and heatmaps" loading="lazy" />
+              </a>
+              <h3 class="major">Bansal Supermarket Sales Analysis <span class="badge">Tableau</span></h3>
+              <div class="article-tech">Sales Performance Dashboard</div>
+              <p>
+                Developed a Tableau dashboard for Bansal Supermarket, revealing sales trends, seasonality, and customer behavior.
+              </p>
+              <div class="project-impact">Impact: Enabled management to optimize inventory and promotions, increasing revenue by 12%.</div>
+              <a href="project2.html" class="special" target="_blank" rel="noopener noreferrer">Explore Project</a>
+            </article>
 
-		<!-- Page Wrapper -->
-		<div id="page-wrapper">
+            <!-- Project 3 -->
+            <article>
+              <a href="project3.html" class="image">
+                <img src="images/Ekam_SQL.avif" alt="Ekam Attendance Automation with SQL and Google Sheets, automated HR report" loading="lazy" />
+              </a>
+              <h3 class="major">Ekam Attendance Tracker <span class="badge">SQL + Google Sheets</span></h3>
+              <div class="article-tech">Automation & Reporting</div>
+              <p>
+                Automated attendance tracking and financial reporting for Ekam Indian Groceries in Adelaide using SQL queries and Google Sheets.
+              </p>
+              <div class="project-impact">Impact: Reduced monthly reporting time by 80% for HR and finance teams.</div>
+              <a href="project3.html" class="special" target="_blank" rel="noopener noreferrer">Explore Project</a>
+            </article>
 
-			<!-- Header -->
-			<header id="header" class="alt">
-				<h1><a href="index.html">SAHIL ALI - PORTFOLIO</a></h1>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+            <!-- Project 4 -->
+            <article>
+              <a href="project4.html" class="image">
+                <img src="images/Store_POWERBI.avif" alt="Multi-Store Daily Cash Flow Analysis Dashboard in Power BI, visualizing cash trends and alerts" loading="lazy" />
+              </a>
+              <h3 class="major">Daily Cash Flow Analysis <span class="badge">Power BI</span></h3>
+              <div class="article-tech">Multi-Store Cash Flow Dashboard</div>
+              <p>
+                Built a Power BI dashboard to track and analyze daily cash flow across multiple retail stores.
+              </p>
+              <div class="project-impact">Impact: Improved financial visibility and helped managers spot cash discrepancies in real time.</div>
+              <a href="project4.html" class="special" target="_blank" rel="noopener noreferrer">Explore Project</a>
+            </article>
 
-			<!-- Menu -->
-			<nav id="menu">
-				<div class="inner">
-					<h2>Menu</h2>
-					<ul class="links">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="aboutme.html">About Me</a></li>
-						<li><a href="experience.html">Experience</a></li>
-						<li><a href="projects.html">Projects</a></li>
-						<li><a href="#footer">Contact</a></li>
-					</ul>
-					<a href="#" class="close">Close</a>
-				</div>
-			</nav>
+            <!-- Project 5 – AI Placeholder -->
+            <article>
+              <a href="project5.html" class="image">
+                <img src="images/gpt5.avif" alt="AI Assistant for Retail Automation Project, AI chatbot interface mockup for inventory" loading="lazy" />
+              </a>
+              <h3 class="major">AI Assistant for Retail <span class="badge">AI + Google Sheets</span></h3>
+              <div class="article-tech">Automation & Insights</div>
+              <p>
+                Coming Soon: An AI-powered assistant that automates stock suggestions, sales insights, and inventory alerts for retail teams.
+              </p>
+              <div class="project-impact">Impact: Designed to save hours on manual analysis and boost inventory accuracy.</div>
+              <a href="project5.html" class="special" target="_blank" rel="noopener noreferrer">Explore the AI</a>
+            </article>
 
-			<!-- Wrapper -->
-			<section id="wrapper">
-				<header>
-					<div class="inner">
-						<h2>Who am I?</h2>
-					</div>
-				</header>
+            <!-- Project 6 – AI Placeholder -->
+            <article>
+              <a href="project6.html" class="image">
+                <img src="images/gpt6.avif" alt="Smart Dashboard Generator using GPT, Tableau, and SQL, AI-generated dashboard preview" loading="lazy" />
+              </a>
+              <h3 class="major">Smart Dashboard Generator <span class="badge">AI + Tableau + SQL</span></h3>
+              <div class="article-tech">AI Automation</div>
+              <p>
+                Coming Soon: One-click dashboard creation using AI prompts and real-time data integration with Tableau and SQL.
+              </p>
+              <div class="project-impact">Impact: Will enable non-technical users to generate powerful dashboards instantly.</div>
+              <a href="project6.html" class="special" target="_blank" rel="noopener noreferrer">See the Project in Action</a>
+            </article>
 
-				<!-- Content -->
-				<div class="wrapper">
-					<div class="inner">
+          </section>
+        </div>
+      </section>
+    </section>
 
-						<p>Hello! I am <strong>Sahil Ali</strong>, an Inventory Specialist, Data Analyst, and System Optimizer based in Rajasthan, India. With over 4 years of hands-on experience, I specialize in managing stock levels, streamlining purchasing processes, and ensuring data accuracy for operational excellence.</p>
+    <!-- Resume Section -->
+    <section class="wrapper style1 align-center">
+      <div class="inner">
+        <ul class="actions stacked">
+          <li>
+            <a href="Sahil_Ali_Cv.pdf" download class="button primary">Download My Resume</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-						<p>My expertise lies in leveraging ERP systems like Erply, advanced Excel functions such as VLOOKUP and Pivot Tables, and data-driven decision-making to optimize inventory and reporting processes. I am passionate about turning raw data into actionable insights that drive business success.</p>
+    <!-- Footer -->
+    <section id="footer">
+      <div class="inner">
+        <h2 class="major">Get in Touch</h2>
+        <p>Let's connect! Your data challenges and my expertise can create impactful solutions.</p>
+        <ul class="contact" aria-label="Contact Information">
+          <li class="icon solid fa-home">Rajasthan, India (Open for Relocation)</li>
+          <li class="icon solid fa-envelope"><a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></li>
+          <li class="icon brands fa-github"><a href="https://github.com/SahilTheCoder" target="_blank" rel="noopener noreferrer">github.com/SahilTheCoder</a></li>
+          <li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/sahil-ali-714867242/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sahil-ali-714867242/</a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Sahil Ali Portfolio. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </section>
 
-						<p>Beyond my technical skills, I am a detail-oriented team player who thrives on collaboration and continuous improvement. I believe that accuracy and efficiency are the backbone of any successful supply chain.</p>
+  </div>
 
-						<h2>Education</h2>
-						<h3>Bachelor of Science (B.Sc.) in Computer Science</h3>
-						<p>MDSU University, Rajasthan (2018 – 2021)</p>
-
-						<section class="features">
-							<article>
-								<h3 class="major">Projects</h3>
-								<p>Explore my projects where I apply data analysis and inventory management skills to real-world problems.</p>
-								<a href="projects.html" class="special">Learn more</a>
-							</article>
-							<article>
-								<h3 class="major">Experience</h3>
-								<p>From inventory management to data analysis roles, my professional journey is full of growth and achievements.</p>
-								<a href="experience.html" class="special">Learn more</a>
-							</article>
-						</section>
-
-					</div>
-				</div>
-
-			</section>
-
-			<!-- Footer -->
-			<section id="footer">
-				<div class="inner">
-					<h2 class="major">Get in touch</h2>
-					<p>Let's connect! Your data and my expertise can create impactful solutions.</p>
-					<ul class="contact">
-						<li class="icon solid fa-home">
-							Rajasthan, India (Open for Relocation)<br />
-						</li>
-						<li class="icon solid fa-envelope"><a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a></li>
-						<li class="icon brands fa-github"><a href="https://github.com/SahilTheCoder">github.com/SahilTheCoder</a></li>
-						<li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/sahil-ali-714867242/">linkedin.com/in/sahil-ali-714867242/</a></li>
-						<li class="icon brands fa-facebook-f"><a href="https://facebook.com/share/1AJGyDehDk/">facebook.com/share/1AJGyDehDk/</a></li>
-						<li class="icon brands fa-instagram"><a href="https://instagram.com/hey__sahilll">instagram.com/hey__sahilll</a></li>
-						<li class="icon solid fa-phone"><a href="tel:+919875771550">+91 9875771550</a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Sahil Ali Portfolio. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</section>
-
-		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-	</body>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
