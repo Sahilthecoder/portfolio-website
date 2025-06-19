@@ -42,7 +42,6 @@
 
     <!-- Favicon (multiple formats for compatibility) -->
     <link rel="icon" href="images/favicon.avif" type="image/avif">
-    <link rel="icon" href="images/favicon.png" type="image/png">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -81,51 +80,86 @@
         </nav>
 
 			<!-- Wrapper -->
-			<section id="wrapper">
-				<header>
-					<div class="inner">
-						<h2>Who am I?</h2>
-					</div>
-				</header>
+<section id="wrapper">
+  <header>
+    <div class="inner">
+      <h2>Who am I?</h2>
+      <p style="color: #9bb0f1; font-style: italic; margin-top: -0.6em; font-weight: 500;">
+        Empowering businesses through data-driven inventory mastery, AI-powered insights & operational excellence.
+      </p>
+    </div>
+  </header>
 
-				<!-- Content -->
-				<div class="wrapper">
-					<div class="inner">
+  <!-- Content -->
+  <div class="wrapper spotlight style6">
+    <div class="inner" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
 
-						<p>Hello! I am <strong>Sahil Ali</strong>, an Inventory Specialist, Data Analyst, and System Optimizer based in Rajasthan, India. With over 4 years of hands-on experience, I specialize in managing stock levels, streamlining purchasing processes, and ensuring data accuracy for operational excellence.</p>
+      <!-- Profile Image with smooth zoom effect -->
+      <div class="image" style="
+        flex: 1 1 320px;
+        max-width: 350px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        transition: transform 0.4s ease;
+        cursor: pointer;
+      "
+      onmouseover="this.style.transform='scale(1.07)'" 
+      onmouseout="this.style.transform='scale(1)'"
+      >
+        <img src="images/profile.avif" alt="Sahil Ali Profile Picture" loading="lazy" style="width: 100%; display: block;"/>
+      </div>
 
-						<p>My expertise lies in leveraging ERP systems like Erply, advanced Excel functions such as VLOOKUP and Pivot Tables, and data-driven decision-making to optimize inventory and reporting processes. I am passionate about turning raw data into actionable insights that drive business success.</p>
+      <!-- Text Content -->
+      <div class="content" style="flex: 2 1 520px; min-width: 280px; color: #e0e6f3;">
 
-						<p>Beyond my technical skills, I am a detail-oriented team player who thrives on collaboration and continuous improvement. I believe that accuracy and efficiency are the backbone of any successful supply chain.</p>
+        <p>Hello! I’m <strong>Sahil Ali</strong>, an accomplished Inventory Specialist, Data Analyst, and System Optimizer from Rajasthan, India, with 4+ years of proven expertise in streamlining inventory management and driving data-backed operational success.</p>
 
-						<h2>Education</h2>
-						<h3>Bachelor of Science (B.Sc.) in Computer Science</h3>
-						<p>MDSU University, Rajasthan (2018 – 2021)</p>
+        <ul style="margin-top: 1.1em; list-style-type: disc; padding-left: 1.5em; font-size: 1.05rem; line-height: 1.6;">
+          <li>Skilled in ERP systems like Erply and advanced Excel tools (VLOOKUP, Pivot Tables) to enhance inventory accuracy</li>
+          <li>Leveraging AI technologies such as ChatGPT and Perplexity for automating reports, generating data insights, and building intelligent dashboards</li>
+          <li>Dedicated to turning complex datasets into actionable business intelligence that drives growth and efficiency</li>
+          <li>Collaborative team player committed to continuous process improvement and operational excellence</li>
+        </ul>
 
-						<section class="features">
-							<article>
-								<h3 class="major">Projects</h3>
-								<p>Explore my projects where I apply data analysis and inventory management skills to real-world problems.</p>
-								<a href="projects.html" class="special">Learn more</a>
-							</article>
-							<article>
-								<h3 class="major">Experience</h3>
-								<p>From inventory management to data analysis roles, my professional journey is full of growth and achievements.</p>
-								<a href="experience.html" class="special">Learn more</a>
-							</article>
-						</section>
+        <p style="margin-top: 1.5em; font-weight: 600; font-size: 1.1rem; color: #a2b0ff;">
+          <em>Achievement highlight:</em> Reduced inventory discrepancies by 15% in one year — boosting turnover and cutting costs while ensuring data precision.
+        </p>
 
-					</div>
-				</div>
+        <h2 style="margin-top: 2.8em;">Education</h2>
+        <h3>Bachelor of Science (B.Sc.) in Computer Science</h3>
+        <p>MDSU University, Rajasthan (2018 – 2021)</p>
 
-			</section>
+        <section class="features" style="margin-top: 2.8em;">
+          <article>
+            <h3 class="major">Projects</h3>
+            <p>Explore my portfolio of data-driven and AI-enhanced projects:</p>
+            <ul style="list-style-type: circle; padding-left: 1.5em; font-size: 1rem; line-height: 1.5;">
+              <li><a href="projects.html#zomato-dashboard" style="color:#82aaff;">Zomato Dashboard – Interactive data visualization with Tableau</a></li>
+              <li><a href="projects.html#attendance-tracker" style="color:#82aaff;">Attendance Tracker – Automated Excel-based attendance system</a></li>
+              <li><a href="projects.html#ai-automation-tools" style="color:#82aaff;">AI Automation & Tools – Integrations using GPT and Perplexity APIs for workflow optimization</a></li>
+            </ul>
+            <a href="projects.html" class="special" style="margin-top: 0.5em; display: inline-block;">Explore All Projects</a>
+          </article>
+          <article>
+            <h3 class="major">Experience</h3>
+            <p>Learn more about my professional journey, highlighting impactful roles in inventory management, data analysis, and AI-driven solutions.</p>
+            <a href="experience.html" class="special">View Experience</a>
+          </article>
+        </section>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 			<!-- Footer -->
             <footer id="footer">
     <div class="inner">
-        <h2 class="major">Get in touch with sahilthecoder</h2>
+        <h2 class="major">Get in touch with Me</h2>
         <p>Let's connect! Your data and my expertise can create impactful solutions.<br>
-        Find more about <strong>sahilthecoder</strong> on these platforms:</p>
+        Find more <strong>About Me </strong> on these platforms:</p>
         <ul class="contact">
             <li class="icon solid fa-home">
                 Rajasthan, India (Open for Relocation)<br />
