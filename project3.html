@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<!--
+	Data Analyst Portfolio
+	sahilkhan36985@gmail.com
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <title>sahilthecoder | Data Analyst Portfolio – Sahil Ali</title>
+    <meta name="description" content="Official portfolio of sahilthecoder (Sahil Ali) – showcasing automation, SQL, Google Sheets, and data analytics projects." />
+    <meta name="author" content="Sahil Ali" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1f2233" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/project3.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="sahilthecoder | Data Analyst Portfolio – Sahil Ali" />
+    <meta property="og:description" content="Explore how sahilthecoder built efficient solutions using SQL, Google Sheets, and smart analytics." />
+    <meta property="og:image" content="https://yourdomain.com/images/Attendance.avif" />
+    <meta property="og:url" content="https://yourdomain.com/project3.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="sahilthecoder | Data Analyst Portfolio – Sahil Ali" />
+    <meta name="twitter:description" content="Explore how sahilthecoder built efficient solutions using SQL, Google Sheets, and smart analytics." />
+    <meta name="twitter:image" content="https://yourdomain.com/images/Attendance.avif" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Awesome (latest) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" />
+
+    <!-- Favicon (multiple formats for compatibility) -->
+    <link rel="icon" href="images/favicon.avif" type="image/avif">S
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">SAHIL ALI - PORTFOLIO</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+      <header>
+        <div class="inner">
+          <h2>Project 3</h2>
+          <h3>Ekam Indian Groceries Stores Adelaide <span class="badge">SQL + Google Sheets</span></h3>
+          <p>Automated tracking of employee hours (SQL + Google Sheets) to flag discrepancies and ensure labor law adherence, reducing payroll errors and overtime costs.</p>
+        </div>
+      </header>
+
+      <div class="wrapper">
+        <div class="inner">
+          <h3 class="major">1. Problem Statement</h3>
+          <ul>
+            <li><b>Manual errors:</b> Employee attendance and working hours were recorded manually, leading to frequent mistakes such as incorrect or missing hours.</li>
+            <li><b>Lack of overtime control:</b> Store-level total working hours often exceeded budgeted limits (e.g., 300 hours/month), increasing labor costs.</li>
+            <li><b>Payroll inaccuracies:</b> Incorrect attendance data caused payroll calculation errors and delays.</li>
+          </ul>
+
+          <h3 class="major">Attendance Sheet Snapshot</h3>
+          <p>This image shows the actual attendance data collected for two stores (IGA STORE and SHABD STORE) for the month. The green cells indicate valid working hours (mostly between 8 to 12 hours), while red cells highlight invalid or problematic entries such as underwork or overwork. The rightmost column shows the total hours worked by each employee for the month, and the bottom rows summarize daily and total hours per store.</p>
+          <div class="image" style="overflow-x:auto; margin-bottom: 2em;">
+            <img src="images/Attendance.avif" alt="Google Sheets attendance tracker for Ekam Groceries with color-coded validation" style="width:100%; max-width:1000px; border: 1px solid #ddd; border-radius: 5px;" loading="lazy">
+          </div>
+
+          <h3 class="major">2. Solution Developed</h3>
+          <ul>
+            <li><b>Color-coded attendance sheet:</b>
+              <ul>
+                <li><span style="color:green; font-weight:bold;">Green cells</span> indicate employees with <strong>correct time management calculations</strong>.</li>
+                <li><span style="color:red; font-weight:bold;">Red cells</span> highlight employees with <strong>incorrect working hour calculations</strong>.</li>
+              </ul>
+            </li>
+            <li><b>Relational SQL database:</b>
+              <ul>
+                <li><strong>Database Architecture:</strong>
+                  <ul>
+                    <li><b>Relational Structure:</b> Stores → Employees → Attendance (cascading foreign keys)</li>
+                    <li><b>Validation Flag:</b> <code>is_valid</code> field marks entries requiring review (red cells)</li>
+                  </ul>
+                </li>
+                <li><strong>Time Management Controls:</strong>
+                  <ul>
+                    <li><b>Enterprise-wide Limit:</b> 4000 total working hours/month across all employees
+                      <ul>
+                        <li><b>Database Enforcement:</b> <code>CHECK(SUM(total_hours) &lt;= 4000)</code> in monthly rollup tables</li>
+                        <li><b>Spreadsheet Formula:</b> <code>=IF(SUM(EmployeeTotals!B:B)&gt;4000, "OVER CAP", "OK")</code></li>
+                      </ul>
+                    </li>
+                    <li><b>Anomaly Detection:</b>
+                      <ul>
+                        <li>SQL alerts when approaching threshold: <code>WHERE monthly_sum &gt; 3800</code></li>
+                        <li>Sheet conditional formatting rules for 90%+ capacity (e.g., 3600+ hours)</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3 class="major">3. Technology Stack</h3>
+          <ul>
+            <li><b>Google Sheets:</b> Used for data entry, color-coded validation (as shown in the image), and real-time collaboration.</li>
+            <li><b>Mathematics:</b> Applied for calculating daily hours, monthly totals, and overtime control.</li>
+            <li><b>SQL:</b> Used for structured storage, querying, and reporting of attendance data.</li>
+            <li><b>Features:</b>
+              <ul>
+                <li>Automated data validation to flag invalid working hours (red cells in the image).</li>
+                <li>Clear visual indicators (color coding) for quick managerial review.</li>
+                <li>Real-time calculations and reporting to monitor attendance and labor costs.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3 class="major">4. Sample SQL Queries</h3>
+          <div style="overflow-x:auto;">
+<pre><code>-- 1. Identify invalid attendance entries
+SELECT e.name, a.work_date, a.hours_worked
+FROM attendance a
+JOIN employees e ON a.employee_id = e.employee_id
+WHERE a.is_valid = FALSE
+ORDER BY a.work_date DESC;
+
+-- 2. Calculate enterprise-wide monthly hours
+SELECT 
+    EXTRACT(MONTH FROM a.work_date) AS month,
+    SUM(a.hours_worked) AS total_hours,
+    CASE 
+        WHEN SUM(a.hours_worked) > 4000 THEN 'OVER_CAP'
+        WHEN SUM(a.hours_worked) > 3800 THEN 'NEAR_CAP'
+        ELSE 'UNDER_CAP'
+    END AS status
+FROM attendance a
+GROUP BY EXTRACT(MONTH FROM a.work_date);
+
+-- 3. Early warning alert (90% capacity)
+SELECT 
+    e.name,
+    s.store_name,
+    SUM(a.hours_worked) AS employee_total
+FROM attendance a
+JOIN employees e ON a.employee_id = e.employee_id
+JOIN stores s ON e.store_id = s.store_id
+WHERE EXTRACT(MONTH FROM a.work_date) = EXTRACT(MONTH FROM CURRENT_DATE)
+GROUP BY e.name, s.store_name
+HAVING SUM(a.hours_worked) > 360;
+</code></pre>
+          </div>
+
+          <h3 class="major">5. Impact and Benefits</h3>
+          <ul>
+            <li><b>Reduced errors by 70%:</b> Color-coded validation allows managers to quickly identify and correct wrong entries, as visible in the image.</li>
+            <li><b>Overtime cost control:</b> Monthly working hours capped, reducing labor expenses by approximately 15%, reflected in the summarized totals.</li>
+            <li><b>Payroll automation:</b> Accurate attendance data enables seamless payroll processing and reduces manual intervention.</li>
+            <li><b>Saved 8+ admin hours/month:</b> Less time spent on manual checking and corrections.</li>
+          </ul>
+          <div class="project-impact">
+            <strong>Impact:</strong> Saved 8+ hours/month in manual checking, reduced payroll errors by 70%, and improved compliance for two stores.
+          </div>
+
+          <h3 class="major">6. Future Enhancements</h3>
+          <ul>
+            <li>Integration with payroll and HR systems for end-to-end automation.</li>
+            <li>Real-time alerts for attendance anomalies using automated notifications.</li>
+            <li>Advanced analytics dashboard for attendance trends and forecasting.</li>
+          </ul>
+
+          <div class="back-btn">
+            <a href="projects.html" class="button" aria-label="Back to all projects">← Back to Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Footer -->
+            <footer id="footer">
+    <div class="inner">
+        <h2 class="major">Get in touch with Me</h2>
+        <p>Let's connect! Your data and my expertise can create impactful solutions.<br>
+        Find more <strong>About Me </strong> on these platforms:</p>
+        <ul class="contact">
+            <li class="icon solid fa-home">
+                Rajasthan, India (Open for Relocation)<br />
+            </li>
+            <li class="icon solid fa-envelope">
+                <a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a>
+            </li>
+            <li class="icon brands fa-github">
+                <a href="https://github.com/SahilTheCoder">github.com/SahilTheCoder</a>
+            </li>
+            <li class="icon brands fa-linkedin-in">
+                <a href="https://www.linkedin.com/in/sahil-ali-714867242/">linkedin.com/in/sahil-ali-714867242/</a>
+            </li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; sahilthecoder (Sahil Ali) Portfolio. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+
+    </html>
