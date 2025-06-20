@@ -36,7 +36,7 @@ body {
 	line-height: 1;
 	-webkit-text-size-adjust: none;
 	background-color: #2e3141;
-	background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.avif");
+	background-color: #2e3141;background-image: linear-gradient(to top, rgba(46, 49, 65, 0.25), rgba(46, 49, 65, 0.25)), url("../../images/bg.avif");
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -3481,7 +3481,7 @@ body.is-menu-visible #menu {
 			#banner {
 				padding: 7em 0 8.25em 0 ;
 				background-color: #2e3141;
-				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.avif");
+				background-color: #2e3141;background-image: linear-gradient(to top, rgba(46, 49, 65, 0.25), rgba(46, 49, 65, 0.25)), url("../../images/bg.avif");
 				background-size: auto,
  cover;
 				background-position: center,
@@ -3593,7 +3593,7 @@ body.is-menu-visible #menu {
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.avif");
+			background-color: #2e3141;background-image: linear-gradient(to top, rgba(46, 49, 65, 0.25), rgba(46, 49, 65, 0.25)), url("../../images/bg.avif");
 			background-size: auto,
  cover;
 			background-position: center,
@@ -4086,7 +4086,7 @@ body.is-menu-visible #menu {
 
 		#footer {
 			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.avif");
+			background-color: #2e3141;background-image: linear-gradient(to top, rgba(46, 49, 65, 0.25), rgba(46, 49, 65, 0.25)), url("../../images/bg.avif");
 			background-size: auto,
  cover;
 			background-position: center,
@@ -4350,4 +4350,3 @@ h1, h2, h3, h4, h5, h6, p, ul, li, .major, .image-caption {
     gap: 6px;
   }
 }
-
