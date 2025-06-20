@@ -3823,6 +3823,7 @@ body.is-menu-visible #menu {
 			.wrapper.spotlight .image img {
 				border-radius: 100%;
 				width: 100%;
+				/* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
 			}
 			
 			.wrapper.spotlight .content {
@@ -4171,123 +4172,182 @@ body.is-menu-visible #menu {
 	/* ===========================
    Experience & Skills Section
    =========================== */
-.exp-section { margin-bottom: 2.5em; }
+.exp-section {
+  margin-bottom: 2.5em;
+}
+
 .exp-meta {
-    font-size: 0.97em;
-    color: #ffd700;
-    margin-bottom: 0.6em;
-    display: flex;
-    gap: 1.5em;
-    align-items: center;
-    flex-wrap: wrap;
+  font-size: 1em;
+  color: #a2b0ff; /* lighter blue, softer than gold for easy reading */
+  margin-bottom: 0.6em;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.exp-meta .fa-calendar { color: #90caf9; margin-right: 0.3em; }
+
+.exp-meta .fa-calendar {
+  color: #6a83d6; /* muted blue accent */
+  margin-right: 0.3em;
+}
+
 .exp-summary {
-    font-size: 1.08em;
-    color: #90caf9;
-    margin-bottom: 0.8em;
-    font-weight: 400;
-    min-height: 3.5em;
+  font-size: 1.05em;
+  color: #d6dffb; /* soft white-blue */
+  margin-bottom: 0.8em;
+  font-weight: 400;
+  min-height: 3.5em;
 }
+
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin-bottom: 1em;
 }
+
 .skill-badge {
-    background: #44475a;
-    color: #ffd700;
-    border-radius: 1em;
-    padding: 0.3em 0.9em;
-    font-size: 0.95em;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    display: inline-block;
+  background: #3e4c88; /* deeper blue for badges */
+  color: #c7d2f9; /* light blue text */
+  border-radius: 1em;
+  padding: 0.35em 1em;
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.skill-badge:hover,
+.skill-badge:focus {
+  background: #5a6bd8; /* lighter blue on hover */
+  color: #fff;
+  outline: none;
+}
+
 .exp-highlights {
-    background: rgba(144,202,249,0.08);
-    border-left: 4px solid #ffd700;
-    border-radius: 0.5em;
-    padding: 1em 1.2em;
-    margin: 1em 0 1.2em 0;
-    color: #fff;
-    min-height: 3em;
-    display: inline-block;
+  background: rgba(102, 131, 230, 0.15); /* subtle transparent blue */
+  border-left: 4px solid #5a6bd8;
+  border-radius: 0.5em;
+  padding: 1em 1.2em;
+  margin: 1em 0 1.2em 0;
+  color: #e8eaf6; /* near-white */
+  min-height: 3em;
+  display: inline-block;
+  font-weight: 600;
 }
+
 .exp-highlights ul {
-    margin: 0;
-    padding-left: 1.2em;
+  margin: 0;
+  padding-left: 1.2em;
 }
+
 .exp-highlights li {
-    list-style: none;
-    margin-bottom: 0.4em;
+  list-style: none;
+  margin-bottom: 0.4em;
+  position: relative;
+  padding-left: 1.6em;
+  font-weight: 500;
 }
+
 .exp-highlights li:before {
-    content: "\f058";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #ffd700;
-    margin-right: 0.5em;
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #5a6bd8;
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 1em;
 }
+
+/* Responsive */
+
 @media (max-width: 900px) {
-    .skills-list { flex-direction: column; gap: 0.3em; }
-    .exp-meta { flex-direction: column; gap: 0.4em; }
+  .skills-list {
+    flex-direction: column;
+    gap: 0.4em;
+  }
+
+  .exp-meta {
+    flex-direction: column;
+    gap: 0.5em;
+  }
 }
 
+/* Global text color override to off-white for all main elements */
 
-/* =================================PROJECT 1 CSS STYLE ================================ */
-body, #page-wrapper, .wrapper, .inner, section, header, h1, h2, h3, h4, h5, h6, p, ul, li, a, .major, .image-caption {
-    color: #fff !important;
-    opacity: 1 !important;
+body, #page-wrapper, .wrapper, .inner, section, header,
+h1, h2, h3, h4, h5, h6, p, ul, li, .major, .image-caption {
+  color: #e0e3f9; /* gentle white-blue */
+  opacity: 1 !important;
 }
-/* Agar aap background dena chahte hain to uncomment karein:
-body {
-    background: #122c4a !important; /* Deep blue }*/
-*/
+
+/* Caption */
 .image-caption {
-    color: #e0e8f0 !important;
+  color: #b0b7d8 !important;
 }
+
+/* Badges */
 .badge {
-    background: #4CAF50;
-    color: #fff;
-    padding: 2px 8px;
-    border-radius: 6px;
-    font-size: 0.85em;
-    margin-left: 8px;
+  background: #5a6bd8;
+  color: #e6e9ff;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.85em;
+  margin-left: 8px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  user-select: none;
 }
+
 .project-impact {
-    color: #2dff7a;
-    font-weight: 500;
-    margin-top: 8px;
-    margin-bottom: 16px;
+  color: #7af47a;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
+
 .tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin: 10px 0 18px 0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 18px 0;
 }
+
 .tags span {
-    background: #f0f4f7;
-    color: #256029;
-    border-radius: 4px;
-    padding: 3px 10px;
-    font-size: 0.92em;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    border: 1px solid #e0e0e0;
+  background: #b8c7f9;
+  color: #2a3a80;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 0.92em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid #d0d9ff;
 }
+
 .subtitle {
-    font-size: 1.08em;
-    color: #3a6ea5;
-    margin-bottom: 12px;
-    margin-top: -8px;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+  font-size: 1.08em;
+  color: #9bb0f1;
+  margin-bottom: 12px;
+  margin-top: -8px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
+
 @media (max-width: 600px) {
-    .badge { font-size: 0.8em; padding: 2px 6px; }
-    .project-impact { margin-bottom: 12px; }
-    .tags { gap: 4px; }
+  .badge {
+    font-size: 0.8em;
+    padding: 2px 8px;
+  }
+
+  .project-impact {
+    margin-bottom: 12px;
+  }
+
+  .tags {
+    gap: 6px;
+  }
 }
+
