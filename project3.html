@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<!--
+	Data Analyst Portfolio
+	sahilkhan36985@gmail.com
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <title>sahilthecoder | Data Analyst Portfolio – Sahil Ali</title>
+    <meta name="description" content="Official portfolio of sahilthecoder (Sahil Ali) – showcasing automation, SQL, Google Sheets, and data analytics projects." />
+    <meta name="keywords" content="SQL, Google Sheets, Attendance, Portfolio" />
+    <meta name="author" content="Sahil Ali" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1f2233" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sahilthecoder.github.io/project3.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="sahilthecoder | Data Analyst Portfolio – Sahil Ali" />
+    <meta property="og:description" content="Explore how sahilthecoder built efficient solutions using SQL, Google Sheets, and smart analytics." />
+    <meta property="og:image" content="https://sahilthecoder.github.io/images/Attendance.avif" />
+    <meta property="og:url" content="https://sahilthecoder.github.io/project3.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="sahilthecoder | Data Analyst Portfolio – Sahil Ali" />
+    <meta name="twitter:description" content="Explore how sahilthecoder built efficient solutions using SQL, Google Sheets, and smart analytics." />
+    <meta name="twitter:image" content="https://sahilthecoder.github.io/images/Attendance.avif" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts with optimized weights -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome (latest) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.avif" type="image/avif" />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        /* Badge styling */
+        .badge {
+            background-color: #444;
+            color: #fff;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">SAHIL ALI - PORTFOLIO</a></h1>
+            <nav>
+                <a href="#menu" aria-label="Open menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu" role="navigation" aria-label="Main navigation">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#" class="close" aria-label="Close menu">Close</a>
+            </div>
+        </nav>
+
+        <!-- Wrapper -->
+        <section id="wrapper">
+            <header>
+                <div class="inner">
+                    <h2>Project 3</h2>
+                    <h3>Ekam Indian Groceries Stores Adelaide <span class="badge">SQL + Google Sheets</span></h3>
+                    <p>Automated tracking of employee hours using SQL and Google Sheets to flag discrepancies and ensure labor law compliance, reducing payroll errors and overtime costs.</p>
+                </div>
+            </header>
+
+            <div class="wrapper">
+                <div class="inner">
+
+                    <h3 class="major">1. Problem Statement</h3>
+                    <ul>
+                        <li><strong>Manual errors:</strong> Attendance and working hours were recorded manually, causing frequent mistakes like incorrect or missing hours.</li>
+                        <li><strong>Lack of overtime control:</strong> Total working hours often exceeded budgeted limits, increasing labor costs.</li>
+                        <li><strong>Payroll inaccuracies:</strong> Incorrect attendance data led to payroll errors and delays.</li>
+                    </ul>
+
+                    <h3 class="major">Attendance Sheet Snapshot</h3>
+                    <p>This snapshot shows attendance data for two stores for a month. Green cells indicate valid working hours (8-12 hours), red cells highlight invalid or problematic entries. Totals per employee and store are summarized.</p>
+                    <div class="image" style="overflow-x:auto; margin-bottom: 2em;">
+                        <img src="images/Attendance.avif" alt="Ekam Groceries attendance tracking dashboard in Google Sheets with color-coded hours per employee" style="width:100%; max-width:1000px; border: 1px solid #ddd; border-radius: 5px;" loading="lazy" />
+                    </div>
+
+                    <h3 class="major">2. Solution Developed</h3>
+                    <ul>
+                        <li><strong>Color-coded attendance sheet:</strong>
+                            <ul>
+                                <li><span style="color:green; font-weight:bold;">Green cells</span> mark correct time calculations.</li>
+                                <li><span style="color:red; font-weight:bold;">Red cells</span> highlight incorrect working hour calculations.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Relational SQL database:</strong>
+                            <ul>
+                                <li><strong>Architecture:</strong> Stores → Employees → Attendance with cascading foreign keys.</li>
+                                <li><strong>Validation flag:</strong> <code>is_valid</code> marks entries needing review.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Time management controls:</strong>
+                            <ul>
+                                <li><strong>Enterprise limit:</strong> 4000 total hours/month enforced via database checks and spreadsheet formulas.</li>
+                                <li><strong>Anomaly detection:</strong> SQL alerts and sheet conditional formatting for high usage.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="major">3. Technology Stack</h3>
+                    <ul>
+                        <li><strong>Google Sheets:</strong> Data entry, validation, and collaboration.</li>
+                        <li><strong>Mathematics:</strong> Calculations for daily hours, totals, and overtime.</li>
+                        <li><strong>SQL:</strong> Structured storage, querying, and reporting.</li>
+                        <li><strong>Features:</strong> Automated validation, visual indicators, real-time reporting.</li>
+                    </ul>
+
+                    <h3 class="major">4. Sample SQL Queries</h3>
+                    <div style="overflow-x:auto;">
+<pre><code>-- Identify invalid attendance entries
+SELECT e.name, a.work_date, a.hours_worked
+FROM attendance a
+JOIN employees e ON a.employee_id = e.employee_id
+WHERE a.is_valid = FALSE
+ORDER BY a.work_date DESC;
+
+-- Calculate monthly total hours and status
+SELECT 
+    EXTRACT(MONTH FROM a.work_date) AS month,
+    SUM(a.hours_worked) AS total_hours,
+    CASE 
+        WHEN SUM(a.hours_worked) > 4000 THEN 'OVER_CAP'
+        WHEN SUM(a.hours_worked) > 3800 THEN 'NEAR_CAP'
+        ELSE 'UNDER_CAP'
+    END AS status
+FROM attendance a
+GROUP BY EXTRACT(MONTH FROM a.work_date);
+
+-- Early warning for employees nearing monthly limit
+SELECT 
+    e.name,
+    s.store_name,
+    SUM(a.hours_worked) AS employee_total
+FROM attendance a
+JOIN employees e ON a.employee_id = e.employee_id
+JOIN stores s ON e.store_id = s.store_id
+WHERE EXTRACT(MONTH FROM a.work_date) = EXTRACT(MONTH FROM CURRENT_DATE)
+GROUP BY e.name, s.store_name
+HAVING SUM(a.hours_worked) > 360;
+</code></pre>
+                    </div>
+
+                    <h3 class="major">5. Impact and Benefits</h3>
+                    <ul>
+                        <li><strong>Reduced errors by 70%:</strong> Color-coded validation enables quick correction.</li>
+                        <li><strong>Overtime cost control:</strong> Monthly hour caps reduced labor expenses by ~15%.</li>
+                        <li><strong>Payroll automation:</strong> Accurate data streamlines payroll processing.</li>
+                        <li><strong>Saved 8+ admin hours/month:</strong> Less manual checking and corrections.</li>
+                    </ul>
+                    <div class="project-impact" style="font-weight:bold; color:#27ae60; margin-top: 1em;">
+    Business Impact: Cut payroll processing time, minimized overtime costs, and aligned labor management with business goals.
+</div>
+
+
+                    <h3 class="major">6. Future Enhancements</h3>
+                    <ul>
+                        <li>Integration with payroll and HR systems for full automation.</li>
+                        <li>Real-time anomaly alerts via automated notifications.</li>
+                        <li>Advanced analytics dashboard for trends and forecasting.</li>
+                    </ul>
+
+                        <div class="back-btn">
+                            <button class="button" onclick="history.back()" aria-label="Back to all projects">← Back to Projects</button>
+                        </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <h2 class="major">Get in touch with Me</h2>
+                <p>Let's connect! Your data and my expertise can create impactful solutions.<br />
+                    Find more <strong>About Me</strong> on these platforms:</p>
+                <ul class="contact">
+                    <li class="icon solid fa-home">
+                        Rajasthan, India (Open for Relocation)<br />
+                    </li>
+                    <li class="icon solid fa-envelope">
+                        <a href="mailto:sahilkhan36985@gmail.com">sahilkhan36985@gmail.com</a>
+                    </li>
+                    <li class="icon brands fa-github">
+                        <a href="https://github.com/SahilTheCoder" target="_blank" rel="noopener noreferrer">github.com/SahilTheCoder</a>
+                    </li>
+                    <li class="icon brands fa-linkedin-in">
+                        <a href="https://www.linkedin.com/in/sahil-ali-714867242/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sahil-ali-714867242/</a>
+                    </li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; sahilthecoder (Sahil Ali) Portfolio. All rights reserved.</li>
+                    <li>Design: <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
