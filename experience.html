@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<!--
+    Data Analyst Portfolio
+    sahilkhan36985@gmail.com
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <title>sahilthecoder | Data Analyst Portfolio – Sahil Ali</title>
+    <meta name="description" content="Official portfolio of sahilthecoder (Sahil Ali) – showcasing automation, SQL, Google Sheets, and data analytics projects." />
+    <meta name="author" content="Sahil Ali" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1f2233" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/project3.html" />
+
+    <!--Open Graph / Facebook -->
+    <meta property="og:title" content="sahilthecoder | Data Analyst Portfolio – Sahil Ali" />
+    <meta property="og:description" content="Explore how sahilthecoder built efficient solutions using SQL, Google Sheets, and smart analytics." />
+    <meta property="og:image" content="https://yourdomain.com/images/Attendance.avif" />
+    <meta property="og:url" content="https://yourdomain.com/project3.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="sahilthecoder | Data Analyst Portfolio – Sahil Ali" />
+    <meta name="twitter:description" content="Explore how sahilthecoder built efficient solutions using SQL, Google Sheets, and smart analytics." />
+    <meta name="twitter:image" content="https://yourdomain.com/images/Attendance.avif" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Awesome (latest) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" />
+
+    <!-- Favicon (multiple formats for compatibility) -->
+    <link rel="icon" href="images/favicon.avif" type="image/avif">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+        .breadcrumb {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            gap: 0.5rem;
+            padding: 0;
+            margin: 0;
+        }
+        .breadcrumb a {
+            color: #5a6bd8;
+            text-decoration: none;
+        }
+        .hero-intro {
+            padding: 1.5rem 2rem;
+            background: #2e86de;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .job-article {
+            margin-bottom: 2.5em;
+            padding: 1.2rem;
+            background: rgba(102, 131, 230, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            color: #d6dffb;
+        }
+        .job-header {
+            margin-bottom: 0.3em;
+            color: #e0e3f9;
+        }
+        .job-meta {
+            font-size: 0.9rem;
+            color: #9bb0f1;
+            margin-bottom: 0.8em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            align-items: center;
+        }
+        .highlight-box {
+            background: rgba(102, 131, 230, 0.15);
+            border-left: 4px solid #5a6bd8;
+            border-radius: 0.5em;
+            padding: 1em 1.2em;
+            margin: 1em 0 1.2em 0;
+            color: #e8eaf6;
+            font-weight: 600;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7em;
+            margin-bottom: 1.5em;
+        }
+        .skill-badge {
+            background: #232c4b;
+            color: #a2b0ff;
+            border-radius: 0.5em;
+            padding: 0.4em 1em;
+            font-size: 1em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+        .exp-section {
+            margin-bottom: 1.5em;
+        }
+        .exp-meta {
+            color: #b1b7d6;
+            font-size: 0.96em;
+            margin-bottom: 0.5em;
+            display: flex;
+            gap: 1.2em;
+            align-items: center;
+        }
+        .exp-summary {
+            color: #e8eaf6;
+            font-size: 1.05em;
+        }
+        .project-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            margin: 2em 0;
+        }
+        .project-card {
+            background: #232c4b;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            width: 220px;
+            text-align: center;
+            padding: 1em 0.7em 1.3em 0.7em;
+        }
+        .project-card img {
+            width: 180px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 0.7em;
+        }
+        .project-card h4 {
+            color: #e0e3f9;
+            margin: 0.3em 0 0 0;
+            font-size: 1.05em;
+        }
+        @media (max-width: 700px) {
+            .project-cards { flex-direction: column; align-items: center; }
+            .skills-list { flex-direction: column; }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">SAHIL ALI - PORTFOLIO</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
+
+        <!-- Experience Content -->
+        <section id="wrapper">
+            <header>
+                <div class="inner">
+                    <h2>Experience</h2>
+                    <p>My professional journey in warehouse operations, GRN management, inventory control, automation, and reporting.</p>
+                </div>
+            </header>
+            <section class="wrapper alt style1">
+                <div class="inner">
+
+                    <!-- Ekam Indian Groceries -->
+                    <article class="job-article" role="region" aria-labelledby="job-ekam-title">
+                        <h3 id="job-ekam-title" class="job-header">Inventory Specialist & Cash Flow</h3>
+                        <div class="job-meta">
+                            <a href="https://www.facebook.com/ekamindiangroceries/" target="_blank" rel="noopener" aria-label="Ekam Indian Groceries Facebook page" style="font-size: 160%;">
+                                <i class="fa fa-building"></i> Ekam Indian Groceries, Adelaide, Australia
+                            </a>
+                            <span style="font-size: 120%;"><i class="fa fa-calendar" aria-hidden="true"></i> <time datetime="2023-12">Dec 2023</time> – <time datetime="2025-06">June 2025</time></span>
+                        </div>
+                        <p>
+                            Managed daily purchase entries, invoice verification, attendance tracking, and supplier coordination across dual store locations. Automated reporting processes and supported cash flow documentation during manager absence.
+                        </p>
+                        <ul>
+                            <li>Handled purchase data and fruit and vegetable invoices using ERP software and advanced Excel functions.</li>
+                            <li>Cross-checked supplier invoices and reconciled statements to prevent overbilling, ensuring financial accuracy.</li>
+                            <li>Maintained staff attendance and created daily cash reports. <a href="project3.html" style="color:#2e86de; text-decoration:none; font-weight:bold;" aria-label="View Attendance Tracker Project">View Attendance Tracker Project</a></li>
+                            <li>Collaborated with the team to support inventory accuracy and operational flow, reducing stock issues significantly.</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>Highlights:</strong>
+                            <ul>
+                                <li>Reduced billing errors and improved invoice match accuracy by 95%.</li>
+                                <li>Saved over 4 hours per week through structured Excel logs and automation. <a href="project4.html" style="color:#2e86de; text-decoration:none; font-weight:bold;" aria-label="View Cash Flow Dashboard">View Cash Flow Dashboard</a></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Bansal Supermarket -->
+                    <article class="job-article" role="region" aria-labelledby="job-bansal-title">
+                        <h3 id="job-bansal-title" class="job-header">GRN Officer</h3>
+                        <div class="job-meta">
+                            <a href="https://www.bansalsupermarket.com/" target="_blank" rel="noopener" aria-label="Bansal Supermarket website" style="font-size: 160%;">
+                                <i class="fa fa-building"></i> Bansal Supermarket, Surat, India
+                            </a>
+                            <span style="font-size: 120%;"><i class="fa fa-calendar" aria-hidden="true"></i> <time datetime="2022-12">Dec 2022</time> – <time datetime="2023-11">Nov 2023</time></span>
+                        </div>
+                        <p>
+                            Responsible for goods receipt entries, invoice cross-checking, offer updates, and FIFO-based inventory flow. Maintained operational registers including Top 100/200 item reports.
+                        </p>
+                        <ul>
+                            <li>Managed GRNs, MRP/offer changes, and 10-item register maintenance with precision.</li>
+                            <li>Conducted regular floor walks and enforced FIFO practices across departments to reduce waste.</li>
+                            <li>Handled PI management, rate updates, and price accuracy for fast-moving items. <a href="project2.html" style="color:#2e86de; text-decoration:none; font-weight:bold;" aria-label="View Sales Analysis Project">View Sales Analysis Project</a></li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>Highlights:</strong>
+                            <ul>
+                                <li>Reduced stock discrepancies by 30% through enhanced GRN practices.</li>
+                                <li>Improved offer accuracy and register organization across 500+ SKUs.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Arzt Health & Private Limited -->
+                    <article class="job-article" role="region" aria-labelledby="job-arzt-title">
+                        <h3 id="job-arzt-title" class="job-header">Warehouse Supervisor</h3>
+                        <div class="job-meta">
+                            <a href="https://www.indiamart.com/arzt-and-health-private-limited/?srsltid=AfmBOop3mWjIQhujg9tRzXPyDMKfMVHgRJcYqDpPXYn0WkD5YQNLCIkn" target="_blank" rel="noopener" aria-label="Arzt Health & Private Limited Indiamart page" style="font-size: 160%;">
+                                <i class="fa fa-building"></i> Arzt Health & Private Limited – Jaipur, India
+                            </a>
+                            <span style="font-size: 120%;"><i class="fa fa-calendar" aria-hidden="true"></i> <time datetime="2022-06">June 2022</time> – <time datetime="2022-11">Nov 2022</time></span>
+                        </div>
+                        <p>
+                            Oversaw stock control, warehouse documentation, and physical inventory across training material storage. Ensured FIFO handling, audits, and timely replenishment.
+                        </p>
+                        <ul>
+                            <li>Led day-to-day warehouse operations and staff coordination with a strong focus on efficiency.</li>
+                            <li>Maintained accurate bin cards, stock logs, and conducted warehouse audits. <a href="project5.html" style="color:#2e86de; text-decoration:none; font-weight:bold;" aria-label="View Automation System Project">View Automation System Project</a></li>
+                            <li>Implemented FIFO principles and organized material flow for training batches.</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>Highlights:</strong>
+                            <ul>
+                                <li>Achieved 100% stock availability across training cycles.</li>
+                                <li>Streamlined warehouse layout and improved stock handling speed.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Portfolio Creation & AI Tools Experience -->
+                    <article class="job-article" role="region" aria-labelledby="job-portfolio-title">
+                        <h3 id="job-portfolio-title" class="job-header">Data Analyst & Automation Specialist – Personal Portfolio & Projects</h3>
+                        <div class="job-meta">
+                            <span style="font-size: 160%; color: #ffffff; display: inline-flex; align-items: center; gap: 0.3em;">
+                                <i class="fa fa-laptop-code"></i> Self-Driven Projects & Automation
+                            </span>
+                            <span style="font-size: 120%;"><i class="fa fa-calendar" aria-hidden="true"></i> <time datetime="2024-01">2024</time> – <time datetime="2025-06">Present</time></span>
+                        </div>
+                        <p>
+                            Designed and developed a professional portfolio website to showcase data analytics, automation, and inventory management expertise. Utilized cutting-edge AI and creative tools to enhance productivity, insights, and workflow automation.
+                        </p>
+                        <ul>
+                            <li>Leveraged <strong>ChatGPT</strong> for code generation, SQL query optimization, and automating routine analysis tasks.</li>
+                            <li>Incorporated <strong>Perplexity AI</strong> for real-time data insights, quick research, and refining data narratives for reports and presentations.</li>
+                            <li>Used advanced <strong>Google Sheets</strong> formulas and Apps Script to automate dashboards, KPI tracking, and vendor reporting.</li>
+                            <li>Implemented dynamic data visualizations and streamlined reporting for personal and client projects.</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>Highlights:</strong>
+                            <ul>
+                                <li>Created a fully automated portfolio site and project dashboards.</li>
+                                <li>Enhanced productivity through AI-driven research and process automation.</li>
+                            </ul>
+                        </div>
+                    </article>
+ <!-- Project Visuals -->
+                    <div class="project-cards">
+                        <div class="project-card">
+                            <a href="project3.html" aria-label="Attendance Tracker Project">
+                                <img src="images/Attendance.avif" alt="Attendance Tracker project screenshot" loading="lazy" />
+                                <h4>Attendance Tracker</h4>
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="project4.html" aria-label="Cash Flow Dashboard Project">
+                                <img src="images/CashFlow1.avif" alt="Cash Flow Dashboard project screenshot" loading="lazy" />
+                                <h4>Cash Flow Dashboard</h4>
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="project2.html" aria-label="Sales Analysis Project">
+                                <img src="images/bs-saleVSpft.avif" alt="Sales Analysis project screenshot" loading="lazy" />
+                                <h4>Sales Analysis</h4>
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="project5.html" aria-label="Automation System Project">
+                                <img src="images/gpt5.avif" alt="Automation System project screenshot" loading="lazy" />
+                                <h4>Automation System</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <h3 class="major">Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge" aria-label="Inventory Management skill level 5 out of 5 stars"><i class="fa fa-boxes"></i> Inventory Management <span aria-hidden="true">★★★★★</span></span>
+                        <span class="skill-badge" aria-label="Data Analysis & Reporting skill level 5 out of 5 stars"><i class="fa fa-chart-bar"></i> Data Analysis & Reporting <span aria-hidden="true">★★★★★</span></span>
+                        <span class="skill-badge" aria-label="Excel skill level 5 out of 5 stars"><i class="fa fa-file-excel"></i> Excel (VLOOKUP, Pivot) <span aria-hidden="true">★★★★★</span></span>
+                        <span class="skill-badge" aria-label="Stock Reconciliation skill level 5 out of 5 stars"><i class="fa fa-sync"></i> Stock Reconciliation <span aria-hidden="true">★★★★★</span></span>
+                        <span class="skill-badge" aria-label="Vendor Coordination skill level 4 out of 5 stars"><i class="fa fa-user-friends"></i> Vendor Coordination <span aria-hidden="true">★★★★☆</span></span>
+                        <span class="skill-badge" aria-label="Attention to Detail skill level 5 out of 5 stars"><i class="fa fa-eye"></i> Attention to Detail <span aria-hidden="true">★★★★★</span></span>
+                        <span class="skill-badge" aria-label="Team Collaboration skill level 5 out of 5 stars"><i class="fa fa-users"></i> Team Collaboration <span aria-hidden="true">★★★★★</span></span>
+                    </div>
+
+                    <!-- Languages -->
+                    <h3 class="major">Languages</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge" aria-label="English skill level 3 out of 5 stars"><i class="fa fa-language"></i> English <span aria-hidden="true">★★★☆☆</span></span>
+                        <span class="skill-badge" aria-label="Hindi skill level 5 out of 5 stars"><i class="fa fa-language"></i> Hindi <span aria-hidden="true">★★★★★</span></span>
+                    </div>
+
+                    <!-- Education -->
+                    <h3 class="major">Education</h3>
+                    <div class="exp-section">
+                        <div class="exp-meta">
+                            <span><i class="fa fa-graduation-cap"></i> MDSU University, Rajasthan</span>
+                            <span><i class="fa fa-calendar" aria-hidden="true"></i> <time datetime="2018-01">Jan 2018</time> – <time datetime="2021-01">Jan 2021</time></span>
+                        </div>
+                        <div class="exp-summary">
+                            Bachelor of Science (B.Sc.) – Computer Science
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <h2 class="major">Get in touch with Me</h2>
+                <p>Let's connect! Your data and my expertise can create impactful solutions.<br>
+                    Find more <strong>About Me</strong> on these platforms:</p>
+                <ul class="contact">
+                    <li class="icon solid fa-home">
+                        Rajasthan, India (Open for Relocation)<br />
+                    </li>
+                    <li class="icon solid fa-envelope">
+                        <a href="mailto:sahilkhan36985@gmail.com" aria-label="Email Sahil Ali">sahilkhan36985@gmail.com</a>
+                    </li>
+                    <li class="icon solid fa-phone">
+                        <a href="tel:+919875771550" aria-label="Call Sahil Ali phone number">+91 9875771550</a>
+                    </li>
+                    <li class="icon brands fa-github">
+                        <a href="https://github.com/SahilTheCoder" aria-label="Sahil Ali GitHub">github.com/SahilTheCoder</a>
+                    </li>
+                    <li class="icon brands fa-linkedin-in">
+                        <a href="https://www.linkedin.com/in/sahilthecoder/" aria-label="Sahil Ali LinkedIn">linkedin.com/in/sahilthecoder</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+  <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+</body>
+</html>
